@@ -1,0 +1,3 @@
+watchfor /REJECTED/
+exec service supervisor restart
+echo red
