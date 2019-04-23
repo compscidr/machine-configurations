@@ -1,25 +1,7 @@
 ---
 - hosts: all
   vars:
-  tasks:
-
-# apt-get packages required for all of the rest of this
-  - name: Add apt repositories for ethereum
-    apt_repository:
-      repo: ppa:ethereum/ethereum
-    become: yes
-
-  - name: Add apt repositories for ethereum-dev
-    apt_repository:
-      repo: ppa:ethereum/ethereum-dev
-    become: yes
-
-  - name: Ansible apt install packages
-    apt:
-      name: "{{ item }}"
-      update_cache: true
-      state: present
-    with_items:
+    packages:
       - software-properties-common
       - git
       - build-essential
@@ -33,6 +15,25 @@
       - ethereum
       - libdbus-1-dev
       - mesa-common-dev
+
+  tasks:
+
+  # apt-get packages required for all of the rest of this
+  - name: Add apt repositories for ethereum
+    apt_repository:
+      repo: ppa:ethereum/ethereum
+    become: yes
+
+  - name: Add apt repositories for ethereum-dev
+    apt_repository:
+      repo: ppa:ethereum/ethereum-dev
+    become: yes
+
+  - name: Ansible apt install packages
+    apt:
+      pkg: "{{ packages }}"
+      update_cache: true
+      state: present
     become: yes
 
   # eth-proxy
