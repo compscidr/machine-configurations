@@ -1,5 +1,5 @@
 # jasonernst.com
-This server is the mining rig above the washing machine. This is a vagrant setup that tries to reproduce the environment for this machine in case in ever shits the bed.
+This server is the mining rig above the washing machine. This is an ansible playbook that tries to reproduce the environment for this machine in case in ever shits the bed.
 
 There is an nginx reverse proxy serving the following websites:
 - www.jasonernst.com
