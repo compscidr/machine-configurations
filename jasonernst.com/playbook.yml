@@ -15,6 +15,9 @@
       - ethereum
       - libdbus-1-dev
       - mesa-common-dev
+      - nginx
+      - apache2
+      - php
 
   tasks:
 
