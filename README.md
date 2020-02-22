@@ -14,7 +14,7 @@ repositories.
 - dev / staging / production evironments for each site
 - automatic backup of data (all source should be on github)
 
-The salt master will run on master.jasonernst.com. 
+The salt master will run on `master.jasonernst.com`. 
 
 Since I'm trying to be cheap, this server will also host a bunch of websites.
 These websites will be hosted on the same machine, each within a docker
@@ -30,10 +30,19 @@ other machines, or onto aws if I ever feel like paying money for any of it
 to run.
 
 ## Master Setup
-Run the `bootstrap-master.sh` script on `master.jasonernst.com` if setting
-it up for the first time. After a minion starts up, check the key and if it
+Run the `bootstrap-salt-master.sh` script on `master.jasonernst.com` if setting
+it up for the first time. 
+
+
+To setup the docker minions, run `bootstrap-docker.sh`.
+
+
+After a minion starts up, check the key and if it
 is correct, accept it.
 
+`salt-key -L`
+
+`salt-key -a <key-glob>`
 
 ## Minion Setup
 ```
