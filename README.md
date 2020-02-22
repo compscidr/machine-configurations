@@ -29,7 +29,20 @@ The idea is that eventually any of these containers can be swapped onto
 other machines, or onto aws if I ever feel like paying money for any of it
 to run.
 
+## Master Setup
+Get the salt master software, open up the firewall:
+```
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+sudo ./install_salt.sh -M
+iptables -A INPUT -m state --state new \ -m tcp -p tcp --dport 4505 -j ACCEPT
+iptables -A INPUT -m state --state new \ -m tcp -p tcp --dport 4506 -j ACCEPT
+```
+After a minion starts up, check the key and if it is correct, accept it.
 
 
-
-
+## Minion Setup
+```
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+sudo ./install_salt.sh
+echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
+```
