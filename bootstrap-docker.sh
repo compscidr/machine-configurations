@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get install docker.io
+sudo apt-get install docker.io docker-compose
 sudo usermod -a -G docker jason
 exec sg docker newgrp `id -gn`
 
@@ -24,3 +24,7 @@ docker run --detach \
      --env "DEFAULT_EMAIL=ernstjason1@gmail.com" \
      jrcs/letsencrypt-nginx-proxy-companion
 
+# start the docker containers for all of the services
+# note that you will need to accept the keys in the salt
+# master before they will completely come up
+docker-compose -f docker/docker-compose.yml up -d

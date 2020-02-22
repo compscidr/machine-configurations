@@ -45,6 +45,8 @@ is correct, accept it.
 `sudo salt-key -a <key-glob>`
 
 ## Minion Setup
+
+### Standalone Minion
 Minions can be standalone machines or docker minions. In the case of standalone
 machine:
 ```
@@ -53,16 +55,9 @@ sudo ./install_salt.sh
 echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
 ```
 
-In the case of a docker minion - there is a base image which can be built from. The
-bare minimimum of what is required to function with the salt master is to inherit the
-base image and then add the master IPs to the salt minion config:
-```
-FROM compscidr/ubuntu-salt-minion:0.1.0
-
-RUN echo 'master: \n  - master.jasonernst.com\n  - 10.0.0.116' | tee -a /etc/salt/minion.d/99-master-address.conf
-```
-
-You'll probably also want to add some pillars to control the roll and such though.
+### Docker minion
+`docker build --rm=true -f docker/Dockerfile . -t <servicename>`
+`docker run <servicename> --hostname=<hostname>`
 
 ### Building the base minion image:
-`docker build --rm=true -t compscidr/ubuntu-salt-minion:0.1.0 -f Dockerfile.minion .`
+`docker build --rm=true -t compscidr/ubuntu-salt-minion:0.1.0 -f docker/Dockerfile.minion .`
