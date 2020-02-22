@@ -40,13 +40,20 @@ To setup the docker minions, run `bootstrap-docker.sh`.
 After a minion starts up, check the key and if it
 is correct, accept it.
 
-`salt-key -L`
+`sudo salt-key -L`
 
-`salt-key -a <key-glob>`
+`sudo salt-key -a <key-glob>`
 
 ## Minion Setup
+Minions can be standalone machines or docker minions. In the case of standalone
+machine:
 ```
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 sudo ./install_salt.sh
 echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
 ```
+
+In the case of a docker minion - there is a base image which can be built from.
+
+### Building the base minion image:
+`docker build --rm=true -t compscidr/ubuntu-salt-minion:0.1.0 -f Dockerfile.minion .`
