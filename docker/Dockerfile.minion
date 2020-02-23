@@ -1,0 +1,18 @@
+#-------
+# Ubuntu 18.04 Salt Minion Image
+# Inspired from: https://xebia.com/blog/combining-salt-with-docker/
+
+FROM ubuntu:18.04
+MAINTAINER Jason Ernst ernstjason1@gmail.com
+
+RUN apt-get update && apt-get install -y curl
+
+# Salt install
+RUN curl -L https://bootstrap.saltstack.com -o install_salt.sh && sh ./install_salt.sh
+
+# Run the Salt Minion and do not detach from the terminal.
+# This is important because the Docker container will exit whenever
+# the CMD process exits.
+
+CMD /usr/bin/salt-minion
+#-------
