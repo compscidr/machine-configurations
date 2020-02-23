@@ -1,2 +1,2 @@
-developer: 
+'*': 
     - nano
