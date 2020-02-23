@@ -5,4 +5,4 @@ base:
 
   'jason-ubuntu-desktop':
     - match: list
-    - developer
+    - developer.nano

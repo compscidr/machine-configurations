@@ -1,3 +1,0 @@
-apache:
-  pkg:
-    - installed
