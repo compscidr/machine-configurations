@@ -9,5 +9,5 @@ rm install_salt.sh
 # get pygit so we can use the github repo for hosting
 sudo apt-get install -y python-pygit2
 
-echo 'gitfs_remotes:\n  - git@github.com:compscidr/machine-configurations.git' | tee -a /etc/salt/master.d/99-master-gitfs.conf
+printf 'gitfs_remotes:\n  - git@github.com:compscidr/machine-configurations.git' | tee -a /etc/salt/master.d/99-master-gitfs.conf
 sudo service salt-master restart
