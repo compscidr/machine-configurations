@@ -1,13 +1,13 @@
 development:
-  'web*':
+  'dev.www*':
     - apache
 
 staging:
-  'web*':
+  'staging.www*':
     - apache
 
 production:
-  'web*':
+  'www*':
     - apache
 
 developer:
