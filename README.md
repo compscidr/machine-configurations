@@ -56,8 +56,12 @@ echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-
 ```
 
 ### Docker minion
-`docker build --rm=true -f docker/Dockerfile . -t <servicename>`
-`docker run <servicename> --hostname=<hostname>`
+Add minions to the `docker/docker-compose.yml` file and run `docker-compose down`
+followed by `docker-compose up` in the `docker` directory. See the `www.jasonernst.com`
+example. This should build a new docker container based on the DockerFile. This will
+just be a container which extends the minion base image, but then adds an entrypoint
+of `scripts/minion-setup.sh` which should configure the minion to use
+`master.jasonernst.com` and starts the minion after the configuration is applied.
 
 ### Building the base minion image:
-`docker build --rm=true -t compscidr/ubuntu-salt-minion:0.1.0 -f docker/Dockerfile.minion .`
+Run the `docker/scripts/build-docker-base.sh` script with the tag number as a parameter.
