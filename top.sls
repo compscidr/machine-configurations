@@ -1,3 +1,5 @@
 base:
-  '*':
-    - nano
+
+  'jason-ubuntu-desktop':
+    - match: list
+    - developer
