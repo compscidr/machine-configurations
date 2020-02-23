@@ -1,3 +1,3 @@
-os:Ubuntu':
+'os:Ubuntu':
   - match: grain
   - nano
