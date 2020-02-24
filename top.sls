@@ -1,6 +1,6 @@
 base:
 
-  'master.jasonernst.com'
+  'master.jasonernst.com':
     - salt.docker
 
   'jason-ubuntu-desktop':
