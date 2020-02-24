@@ -14,4 +14,4 @@ nginx-proxy:
       - 80:80 
       - 443:443
     - detach: True
-    - order: 211
+    - start: True
