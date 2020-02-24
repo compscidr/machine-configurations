@@ -3,19 +3,6 @@ install_docker-py:
     - name: docker-py
 
 nginx-proxy:
-  docker_container.pulled:
-    - require
-      - pip: docker-py
-    - name: jwilder/nginx-proxy
-    - tag: latest
-    - order: 200
-
-  docker_container.installed:
-    - name: nginx-proxy
-    - image: jwilder/nginx-proxy:latest
-    - mem_limit: None
-    - order: 210
-
   docker_container.running:
     - image: jwilder/nginx-proxy:latest
     - volumes:
