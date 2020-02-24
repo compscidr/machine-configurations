@@ -7,5 +7,3 @@ apache:
     - running
     - enable: True
     - reload: True
-    - require:
-      - file: /etc/init.d/apache2
