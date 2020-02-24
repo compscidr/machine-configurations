@@ -9,3 +9,5 @@ services:
     hostname: www
     domainname: jasonernst.com
     container_name: www.jasonernst.com
+    ports:
+      - "80"

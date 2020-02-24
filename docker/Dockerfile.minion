@@ -8,7 +8,7 @@ MAINTAINER Jason Ernst ernstjason1@gmail.com
 RUN apt-get update && apt-get install -y curl
 
 # Salt install
-RUN curl -L https://bootstrap.saltstack.com -o install_salt.sh && sh ./install_salt.sh
+RUN curl -L https://bootstrap.saltstack.com -o install_salt.sh && sh ./install_salt.sh -x python3 stable 2019.2
 
 # Salt minion should be running as a service so to keep running we just run bash
 # like the Ubuntu base image
