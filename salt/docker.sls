@@ -3,7 +3,7 @@ install_docker-py:
     - name: docker-py
 
 nginx-proxy:
-  docker_container.running:
+  docker_container.run:
     - name: nginx-proxy
     - image: jwilder/nginx-proxy
     - volumes:
