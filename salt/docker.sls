@@ -4,7 +4,8 @@ install_docker-py:
 
 nginx-proxy:
   docker_container.running:
-    - image: jwilder/nginx-proxy:latest
+    - name: nginx-proxy
+    - image: jwilder/nginx-proxy
     - volumes:
       - /etc/nginx/certs
       - /etc/nginx/vhost.d
