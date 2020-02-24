@@ -3,8 +3,9 @@ install_docker-py:
     - name: docker-py
 
 nginx-proxy:
-  requires: install_docker-py
   docker_container.running:
+    - require:
+      - install_docker-py
     - image: jwilder/nginx-proxy
     - volumes:
       - /etc/nginx/certs
