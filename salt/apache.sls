@@ -1,4 +1,4 @@
-apache:
+apache2:
   pkg:
     - installed
     - pkgs:
