@@ -14,6 +14,6 @@ nginx-proxy:
     - port_bindings:
       - 80:80 
       - 443:443
-    - entrypoint: "/app/docker-entrypoint.sh"
+    - entrypoint: "/app/docker-entrypoint.sh forego start -r"
     - detach: True
     - replace: True
