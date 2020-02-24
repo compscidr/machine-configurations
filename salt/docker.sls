@@ -5,7 +5,7 @@ install_docker-py:
 nginx-proxy:
   docker_container.run:
     - name: nginx-proxy
-    - image: jwilder/nginx-proxy
+    - image: jwilder/nginx-proxy:latest
     - volumes:
       - /etc/nginx/certs
       - /etc/nginx/vhost.d
@@ -16,9 +16,9 @@ nginx-proxy:
       - 443:443
     - detach: True
     - replace: True
-#    - entrypoint: "/app/docker-entrypoint.sh forego start -r" 
+    - entrypoint: "/app/docker-entrypoint.sh forego start -r" 
 #  nginx-proxy-letsencrypt.run:
-#    - name: nginx-proxy-letsencrypt
+#    - name: nginx-proxy-letsencrypt:latest
 #    - image: jrcs/letsencrypt-nginx-proxy-companion
 #    - binds: /var/run/docker.sock:/tmp/docker.sock:ro
 #    - volumes_from: nginx-proxy
