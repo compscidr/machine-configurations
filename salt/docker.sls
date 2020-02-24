@@ -16,4 +16,3 @@ nginx-proxy:
       - 443:443
     - entrypoint: "/app/docker-entrypoint.sh"
     - detach: True
-    - start: True
