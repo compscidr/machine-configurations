@@ -1,7 +1,7 @@
 base:
 
-  'www*':
-    - salt.apache
+  'master.jasonernst.com'
+    - salt.docker
 
   'jason-ubuntu-desktop':
     - salt.developer.nano
