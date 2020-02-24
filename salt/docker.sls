@@ -16,7 +16,6 @@ nginx-proxy:
       - 443:443
     - detach: True
     - replace: True
-#    - force: True
     - entrypoint: "/app/docker-entrypoint.sh forego start -r" 
 
   nginx-proxy-letsencrypt.run:
@@ -28,4 +27,3 @@ nginx-proxy:
       - DEFAULT_EMAIL=ernstjason1@gmail.com 
     - detach: True
     - replace: True
-#    - force: True
