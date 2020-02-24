@@ -14,5 +14,5 @@ nginx-proxy:
     - port_bindings:
       - 80:80 
       - 443:443
-    - detach: True
+    - detach: False
     - start: True

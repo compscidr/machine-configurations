@@ -1,7 +1,13 @@
 #!/bin/bash
-sudo apt-get install docker.io docker-compose
-sudo usermod -a -G docker jason
-exec sg docker newgrp `id -gn`
+#sudo apt-get install docker.io docker-compose
+#sudo usermod -a -G docker jason
+#exec sg docker newgrp `id -gn`
+
+docker stop nginx-proxy
+docker rm nginx-proxy
+
+docker stop nginx-proxy-letsencrypt
+docker rm nginx-proxy-letsencrypt
 
 # nginx reverse proxy
 # https://github.com/jwilder/nginx-proxy
@@ -27,4 +33,4 @@ docker run --detach \
 # start the docker containers for all of the services
 # note that you will need to accept the keys in the salt
 # master before they will completely come up
-docker-compose -f docker/docker-compose.yml up -d
+#docker-compose -f docker/docker-compose.yml up -d
