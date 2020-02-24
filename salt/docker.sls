@@ -1,11 +1,11 @@
 docker-containers:
   lookup:
     nginx_proxy:
-      - image: jwilder/nginx-proxy:latest
-      - pull_before_start: true
-      - remove_before_start: true
-      - remove_on_stop: false
-      - runoptions:
+      image: jwilder/nginx-proxy:latest
+      pull_before_start: true
+      remove_before_start: true
+      remove_on_stop: false
+      runoptions:
         - "--detach"
         - "--name nginx-proxy"
         - "--publish 80:80"
