@@ -7,7 +7,7 @@ docker:
 
   compose:
     nginx-proxy:
-      jwilder/nginx-proxy:latest
+      image: 'jwilder/nginx-proxy:latest'
 
       container_name: 'nginx-proxy'
       ports:
