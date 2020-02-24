@@ -1,7 +1,7 @@
 base:
 
   'www*':
-    - apache
+    - salt.apache
 
   'jason-ubuntu-desktop':
     - salt.developer.nano
