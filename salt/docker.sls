@@ -1,30 +1,14 @@
 docker:
-  # Global functions for docker_container states
-  containers:
-    skip_translate: ports
-    force_present: false
-    force_running: true
-
   compose:
-    nginx-proxy:
-      image: 'jwilder/nginx-proxy:latest'
-
-      container_name: 'nginx-proxy'
+    nginx:
+      image: 'library/nginx:1.9.0'
+      container_name: 'nginx-999-99'
+      restart: 'always'
+      links:
+        - 'registry-999-99-service:registry'
       ports:
         - '80:80'
         - '443:443'
-      volumes:
-        - /srv/docker-registry/nginx/:/etc/nginx/conf.d
-        - /srv/docker-registry/auth/:/etc/nginx/conf.d/auth
-        - /srv/docker-registry/certs/:/etc/nginx/conf.d/certs
-      binds: /var/run/docker.sock:/tmp/docker.sock:ro
-      deploy:                # compose v3
-        restart_policy:
-          condition: on-failure
-          delay: 5s
-          max_attempts: 3
-          window: 120s
-
 #docker-containers:
 #  lookup:
 #    nginx_proxy:
