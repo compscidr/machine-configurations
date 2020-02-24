@@ -1,12 +1,4 @@
 docker:
-  install_pypi_pip: true
-
-  pkg:
-    # Package handling
-    # version: 1.13.1
-    # allow_updates: true
-    use_upstream_app: false
-  
   # Global functions for docker_container states
   containers:
     skip_translate: ports
