@@ -5,7 +5,7 @@ install_docker-py:
 nginx-proxy:
   docker_container.running:
     - require:
-      - install_docker-py
+      - pip: docker-py
     - image: jwilder/nginx-proxy
     - volumes:
       - /etc/nginx/certs
@@ -15,3 +15,4 @@ nginx-proxy:
     - port_bindings:
       - 80:80 
       - 443:443
+    - detach: True
