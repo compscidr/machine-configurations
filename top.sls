@@ -1,8 +1,7 @@
 base:
 
   'www*':
-    - apache
+    - salt.apache
 
   'jason-ubuntu-desktop':
-    - match: list
-    - developer.nano
+    - salt.developer.nano
