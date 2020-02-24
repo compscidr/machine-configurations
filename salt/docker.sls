@@ -17,6 +17,7 @@ nginx-proxy:
     - detach: True
     - replace: True
     - force: True
+    - entrypoint: "/app/docker-entrypoint.sh forego start -r" 
   nginx-proxy-letsencrypt.run:
     - name: nginx-proxy-letsencrypt
     - image: jrcs/letsencrypt-nginx-proxy-companion
