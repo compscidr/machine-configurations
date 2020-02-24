@@ -1,4 +1,9 @@
+install_docker-py:
+  pip.installed:
+    - name: docker-py
+
 nginx-proxy:
+  requires: install_docker-py
   docker_container.running:
     - image: jwilder/nginx-proxy
     - volumes:
