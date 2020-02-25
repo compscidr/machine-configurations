@@ -1,0 +1,28 @@
+[Unit]
+Description=%i service with docker compose
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+User=root
+
+WorkingDirectory=/etc/docker/compose/%i
+
+# Remove old containers, images and volumes
+ExecStartPre=/usr/local/bin/docker-compose down
+ExecStartPre=/usr/local/bin/docker-compose rm -f
+# TODO(rdeaton): These are templated from the internet, but I want to research what they do more before enabling
+# ExecStartPre=-/bin/bash -c 'docker volume ls -qf "name=%i_" | xargs docker volume rm'
+# ExecStartPre=-/bin/bash -c 'docker network ls -qf "name=%i_" | xargs docker network rm'
+# ExecStartPre=-/bin/bash -c 'docker ps -aqf "name=%i_*" | xargs docker rm'
+
+# Compose up
+ExecStart=/usr/local/bin/docker-compose up --force-recreate --renew-anon-volumes --abort-on-container-exit --quiet-pull
+
+# Compose down, remove containers and volumes
+ExecStop=/usr/local/bin/docker-compose down
+
+[Install]
+WantedBy=multi-user.target
+© 2020 GitHub, Inc.
