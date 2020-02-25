@@ -1,7 +1,7 @@
 /etc/docker/compose/nginx/docker-compose.yml:
   file.managed:
     - makedirs: True
-    - source: salt://reverse-proxy.yml
+    - source: salt://nginx-docker-compose.yml
     - user: root
     - group: root
     - mode: 0644
