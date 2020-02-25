@@ -1,7 +1,7 @@
 base:
 
   'master.jasonernst.com':
-    - salt.docker
+    - docker
 
 #  'jason-ubuntu-desktop':
 #    - salt.developer.nano
