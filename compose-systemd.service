@@ -21,7 +21,7 @@ ExecStartPre=/usr/local/bin/docker-compose rm -f
 # ExecStartPre=-/bin/bash -c 'docker ps -aqf "name=%i_*" | xargs docker rm'
 
 # Compose up
-ExecStart=/usr/local/bin/docker-compose start --force-recreate --renew-anon-volumes --abort-on-container-exit --quiet-pull
+ExecStart=/usr/local/bin/docker-compose up --force-recreate --renew-anon-volumes --abort-on-container-exit --quiet-pull
 
 # Compose down, remove containers and volumes
 ExecStop=/usr/local/bin/docker-compose down
