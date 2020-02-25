@@ -11,7 +11,7 @@
         - user: root
         - group: root
         - mode: 0644
-        - source: salt://docker/compose-systemd.service
+        - source: salt://compose-systemd.service
 
 Reload systemd:
     cmd.run:
