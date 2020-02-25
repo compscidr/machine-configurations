@@ -1,6 +1,7 @@
 base:
 
   'master.jasonernst.com':
+    - compose
     - nginx
 
 #  'jason-ubuntu-desktop':
