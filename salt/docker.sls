@@ -1,53 +1,13 @@
-docker:
-  compose:
-    nginx:
-      image: 'library/nginx:1.9.0'
-      container_name: 'nginx-999-99'
-      restart: 'always'
-      links:
-        - 'registry-999-99-service:registry'
-      ports:
-        - '80:80'
-        - '443:443'
-#docker-containers:
-#  lookup:
-#    nginx_proxy:
-#      image: jwilder/nginx-proxy:latest
-#      pull_before_start: true
-#      remove_before_start: true
-#      remove_on_stop: false
-#      runoptions:
-#        - "--detach"
-#        - "--name nginx-proxy"
-#        - "--publish 80:80"
-#        - "--publish 443:443"
-#        - "--volume /etc/nginx/certs"
-#        - "--volume /etc/nginx/vhost.d"
-#        - "--volume /usr/share/nginx/html"
-#        - "--volume /var/run/docker.sock:/tmp/docker.sock:ro"
+/etc/docker/compose/nginx/docker-compose.yml:
+  file.managed:
+    - makedirs: True
+    - source: salt://salt/reverse-proxy.yml
+    - user: root
+    - group: root
+    - mode: 0644
 
-#install_docker-py:
-#  pip.installed:
-#    - name: docker-py
-
-#nginx-proxy:
-#  docker_container.run:
-#    - name: nginx-proxy
-#    - image: jwilder/nginx-proxy:latest
-#    - volumes:
-#      - /etc/nginx/certs
-#      - /etc/nginx/vhost.d
-#      - /usr/share/nginx/html
-#    - binds: /var/run/docker.sock:/tmp/docker.sock:ro
-#    - port_bindings:
-#      - 80:80
-#      - 443:443
-#  nginx-proxy-letsencrypt.run:
-#    - name: nginx-proxy-letsencrypt:latest
-#    - image: jrcs/letsencrypt-nginx-proxy-companion
-#    - binds: /var/run/docker.sock:/tmp/docker.sock:ro
-#    - volumes_from: nginx-proxy
-#    - environment:
-#      - DEFAULT_EMAIL=ernstjason1@gmail.com 
-#    - detach: True
-#    - replace: True
+docker-compose@nginx:
+  service.running:
+    - enable: True
+    - watch:
+      - file: /etc/docker/compose/nginx/docker-compose.yml
