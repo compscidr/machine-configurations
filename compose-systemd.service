@@ -5,13 +5,17 @@ After=docker.service
 
 [Service]
 Restart=always
-User=root
 
+User=root
+RestartSec=10
+TimeoutStartSec=60
+TimeoutStopSec=15
 WorkingDirectory=/etc/docker/compose/%i
 
 # Remove old containers, images and volumes
 ExecStartPre=/usr/local/bin/docker-compose down
 ExecStartPre=/usr/local/bin/docker-compose rm -f
+ExecStartPre=/usr/local/bin/docker container prune
 # TODO(rdeaton): These are templated from the internet, but I want to research what they do more before enabling
 # ExecStartPre=-/bin/bash -c 'docker volume ls -qf "name=%i_" | xargs docker volume rm'
 # ExecStartPre=-/bin/bash -c 'docker network ls -qf "name=%i_" | xargs docker network rm'
