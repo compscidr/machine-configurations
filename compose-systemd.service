@@ -25,4 +25,3 @@ ExecStop=/usr/local/bin/docker-compose down
 
 [Install]
 WantedBy=multi-user.target
-© 2020 GitHub, Inc.
