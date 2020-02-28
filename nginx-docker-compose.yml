@@ -4,6 +4,8 @@ services:
   nginx-proxy:
     image: jwilder/nginx-proxy
     container_name: nginx-proxy
+    hostname: proxy
+    domainname: jasonernst.com
     ports:
       - "80:80"
       - "443:443"

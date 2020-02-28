@@ -4,5 +4,5 @@ base:
     - compose
     - nginx
 
-#  'jason-ubuntu-desktop':
-#    - salt.developer.nano
+  'jason-ubuntu-desktop':
+    - salt.developer.nano
