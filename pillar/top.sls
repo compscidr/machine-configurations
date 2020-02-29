@@ -4,7 +4,7 @@ docker-containers:
       image: "jwilder/nginx-proxy"
       cmd:
       runoptions:
-        - "-p 80:80"
+        - '-p 80:80'
         - '-p 443:443"
         - '-v conf:/etc/nginx/conf.d'
         - '-v vhost:/etc/nginx/vhost.d'
