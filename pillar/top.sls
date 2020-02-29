@@ -2,6 +2,7 @@ docker-containers:
   lookup:
     nginx-proxy:
       image: "jwilder/nginx-proxy"
+      cmd:
       runoptions:
         - "-p 80:80"
         - "-p 443:443"
