@@ -3,7 +3,7 @@ base:
   'master.jasonernst.com':
     - compose
     - nginx
-    - salt
+    - jasonernst.com
 
   'jason-ubuntu-desktop':
     - salt.developer.nano
