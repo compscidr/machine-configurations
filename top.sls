@@ -4,9 +4,8 @@ base:
     #- compose
     #- nginx
     #- jasonernst
-    include:
-      - docker
-      - docker.containers
+    - docker
+    - docker.containers
 
   'jason-ubuntu-desktop':
     - salt.developer.nano
