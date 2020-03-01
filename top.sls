@@ -4,6 +4,7 @@ base:
     - docker
     - docker.containers
     - developer
+    - .website
 
   'jason-ubuntu-desktop':
     - developer
