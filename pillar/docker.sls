@@ -30,6 +30,7 @@ docker-containers:
         - "-e VIRTUAL_HOST=www.jasonernst.com"
         - "-e VIRTUAL_PORT=8080"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
+        - "-v /var/www/www.jasonernst.com/:/var/www/html/"
         - "--rm"
     php:
       image: "compscidr/php:0.1.0"
@@ -42,3 +43,10 @@ docker-containers:
       runoptions:
         - "-e MYSQL_ROOT_PASSWORD=rootpassword"
         - "--rm"
+
+# https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html
+git-www-jasonernst-com:
+  git.latest:
+    - name: git@github.com:compscidr/www.jasonernst.com.git
+    - rev: master
+    - target: /var/www/www/jasonernst.com/
