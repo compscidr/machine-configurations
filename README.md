@@ -58,3 +58,10 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 sudo ./install_salt.sh
 echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
 ```
+
+# TODO:
+- There is a problem with the master restarts, the web servers need to be added
+back to backend network with: `docker network connect backend <webserver container>`.
+Need to figure out how to fix.
+- For developer setup, need to figure out how to distribute the gpg keys so that
+I can easily sign git commits on newly setup machines without rigamarole.
