@@ -5,3 +5,9 @@ git-www-jasonernst-com:
     - rev: master
     - target: /var/www/www.jasonernst.com/
 
+git-dev-jasonernst-com:
+  git.latest:
+    - name: git@github.com:compscidr/www.jasonernst.com.git
+    - rev: develop
+    - target: /var/www/dev.jasonernst.com/
+

@@ -34,6 +34,17 @@ docker-containers:
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /var/www/www.jasonernst.com/:/var/www/html/"
         - "--rm"
+    dev.jasonernst.com:
+      image: "compscidr/apache:0.1.0"
+      cmd:
+      runoptions:
+        - "-p 8080"
+        - "-e VIRTUAL_HOST=dev.jasonernst.com"
+        - "-e VIRTUAL_PORT=8080"
+        - "-e LETSENCRYPT_HOST=dev.jasonernst.com"
+        - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
+        - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
+        - "--rm"
     php:
       image: "compscidr/php:0.1.0"
       cmd:
