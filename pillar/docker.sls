@@ -20,7 +20,7 @@ docker-containers:
       runoptions:
         - "-v certs:/etc/nginx/certs:rw"
         - "-v /var/run/docker.sock:/var/run/docker.sock:ro"
-        - "-volumes-from nginx-proxy"
+        - "--volumes-from nginx-proxy"
         - "--network=bridge"
         - "--rm"
 
