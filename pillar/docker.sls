@@ -24,7 +24,7 @@ docker-containers:
         - "--network=bridge"
         - "--rm"
     www.jasonernst.com:
-      image: "compscidr/apache:0.4.0"
+      image: "compscidr/apache:0.5.0"
       cmd:
       runoptions:
         - "-p 8080"
@@ -36,7 +36,7 @@ docker-containers:
         - "--network=bridge"
         - "--rm"
     dev.jasonernst.com:
-      image: "compscidr/apache:0.4.0"
+      image: "compscidr/apache:0.5.0"
       cmd:
       runoptions:
         - "-p 8080"
@@ -44,17 +44,29 @@ docker-containers:
         - "-e VIRTUAL_PORT=8080"
         - "-e LETSENCRYPT_HOST=dev.jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
+        - "-e PHP_HOST="www-php"
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
         - "--network=bridge"
         - "--rm"
-    php:
-      image: "compscidr/php:0.4.0"
+    www-php:
+      image: "compscidr/php:0.5.0"
       cmd:
       runoptions:
         - "-p 9000:9000"
         - "-e VIRTUAL_HOST=php"
         - "-e VIRTUAL_PORT=9000"
+        - "-e PHP_HOST="dev-php"
         - "-v /var/www/www.jasonernst.com/:/var/www/html/"
+        - "--network=backend"
+        - "--rm"
+    dev-php:
+      image: "compscidr/php:0.5.0"
+      cmd:
+      runoptions:
+        - "-p 9000:9000"
+        - "-e VIRTUAL_HOST=php"
+        - "-e VIRTUAL_PORT=9000"
+        - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
         - "--network=backend"
         - "--rm"
     mysql:
