@@ -1,2 +1,2 @@
 include:
-  - nano
+  - .nano
