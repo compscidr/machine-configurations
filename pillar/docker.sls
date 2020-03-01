@@ -45,14 +45,15 @@ docker-containers:
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
         - "--rm"
-    php:
+    php.jasonernst.com:
       image: "compscidr/php:0.1.0"
       cmd:
       runoptions:
         - "-p 9000:9000"
-        - "-e VIRTUAL_HOST=php"
+        - "-e VIRTUAL_HOST=php.jasonernst.com"
         - "-e VIRTUAL_PORT=9000"
-        - "--network-alias=php"
+        - "-e LETSENCRYPT_HOST=php.jasonernst.com"
+        - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "--rm"
     mysql:
       image: "mysql:latest"
