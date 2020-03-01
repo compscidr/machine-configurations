@@ -50,6 +50,8 @@ docker-containers:
       cmd:
       runoptions:
         - "-p 9000:9000"
+        - "-e VIRTUAL_HOST=php"
+        - "-e VIRTUAL_PORT=9000"
         - "--rm"
     mysql:
       image: "mysql:latest"
