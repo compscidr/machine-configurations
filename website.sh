@@ -1,1 +1,1 @@
-docker run --detach     --name www.jasonernst.com     --env "VIRTUAL_HOST=www.jasonernst.com"     --env "VIRTUAL_PORT=80"     --env "LETSENCRYPT_HOST=www.jasonernst.com"     --env "LETSENCRYPT_EMAIL=ernstjason1@gmail.com" -v "$PWD":/usr/local/apache2/htdocs/ httpd
+docker run --detach --name dev.jasonernst.com --env "VIRTUAL_HOST=dev.jasonernst.com" --env "VIRTUAL_PORT=80" --env "LETSENCRYPT_HOST=dev.jasonernst.com" --env "LETSENCRYPT_EMAIL=ernstjason1@gmail.com" -v "$PWD":/usr/local/apache2/htdocs/ httpd
