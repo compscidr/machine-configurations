@@ -40,4 +40,5 @@ docker-containers:
       image: "mysql:latest"
       cmd:
       runoptions:
+        - "-e MYSQL_ROOT_PASSWORD=rootpassword"
         - "--rm"
