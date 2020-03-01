@@ -23,6 +23,18 @@ docker-containers:
         - "--volumes-from nginx-proxy"
         - "--network=bridge"
         - "--rm"
+    www.jasonernst.com:
+      image: compscidr/apache:0.1.0
+      cmd:
+      runoptions:
+        - "-e VIRTUAL_HOST=www.jasonernst.com"
+        - "-e VIRTUAL_PORT=8080"
+        - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
+    php:
+      image: compscidr/php:0.1.0
+      cmd:
+    mysql:
+      image: mysql:5.6.40
 
 #    myapp:
 #      image: "myregistry.com:5000/training/app:3.0"
