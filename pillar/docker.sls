@@ -12,6 +12,7 @@ docker-containers:
         - "-v dhparam:/etc/nginx/dhparam"
         - "-v certs:/etc/nginx/certs:ro"
         - "-v /var/run/docker.sock:/tmp/docker.sock:ro"
+        - "-e DEFAULT_HOST=www.jasonernst.com"
         - "--network=bridge"
         - "--rm"
     letsencrypt:
