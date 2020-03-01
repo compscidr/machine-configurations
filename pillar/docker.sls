@@ -49,9 +49,9 @@ docker-containers:
       image: "compscidr/php:0.1.0"
       cmd:
       runoptions:
-        - "-p 9000:9000"
-        - "-e VIRTUAL_HOST=php"
-        - "-e VIRTUAL_PORT=9000"
+#        - "-p 9000:9000"
+#        - "-e VIRTUAL_HOST=php"
+#        - "-e VIRTUAL_PORT=9000"
         - "--network=container:nginx-proxy php -h php"
         - "--rm"
     mysql:
