@@ -3,4 +3,5 @@ include:
 
 developer_packages:
   pkg.installed:
-    - build-essential
+    - pkgs:
+      - build-essential
