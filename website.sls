@@ -1,12 +1,16 @@
 frontend:
   docker_network.present:
     - name: frontend
-    - containers: www.jasonernst.com
+    - containers:
+      - www.jasonernst.com
+      - dev.jasonernst.com
 
 backend:
   docker_network.present:
     - name: backend
-    - containers: www.jasonernst.com
+    - containers:
+      - www.jasonernst.com
+      - dev.jasonernst.com
 
 # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html
 git-www-jasonernst-com:
