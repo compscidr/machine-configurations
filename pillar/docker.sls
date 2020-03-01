@@ -49,14 +49,15 @@ docker-containers:
       image: "compscidr/php:0.1.0"
       cmd:
       runoptions:
-#        - "-p 9000:9000"
+        - "-p 9000:9000"
         - "-e VIRTUAL_HOST=php"
         - "-e VIRTUAL_PORT=9000"
-        - "--network=container:nginx-proxy"
+        - "--network-alias=php"
         - "--rm"
     mysql:
       image: "mysql:latest"
       cmd:
       runoptions:
         - "-e MYSQL_ROOT_PASSWORD=rootpassword"
+        - "--network-alias=mysql"
         - "--rm"
