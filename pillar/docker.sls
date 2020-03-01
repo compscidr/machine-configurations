@@ -44,16 +44,17 @@ docker-containers:
         - "-e VIRTUAL_PORT=8080"
         - "-e LETSENCRYPT_HOST=dev.jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
-        - "-e PHP_HOST=www-php"
+        - "-e PHP_HOST=dev-php"
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
         - "--network=bridge"
         - "--rm"
     www-php:
       image: "compscidr/php:0.5.0"
+      name: www-php
       cmd:
       runoptions:
         - "-p 9000:9000"
-        - "-e VIRTUAL_HOST=php"
+        - "-e VIRTUAL_HOST=www-php"
         - "-e VIRTUAL_PORT=9000"
         - "-e PHP_HOST=dev-php"
         - "-v /var/www/www.jasonernst.com/:/var/www/html/"
@@ -61,10 +62,11 @@ docker-containers:
         - "--rm"
     dev-php:
       image: "compscidr/php:0.5.0"
+      name: dev-php
       cmd:
       runoptions:
         - "-p 9000:9000"
-        - "-e VIRTUAL_HOST=php"
+        - "-e VIRTUAL_HOST=dev-php"
         - "-e VIRTUAL_PORT=9000"
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
         - "--network=backend"
