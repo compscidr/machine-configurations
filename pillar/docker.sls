@@ -52,7 +52,7 @@ docker-containers:
 #        - "-p 9000:9000"
 #        - "-e VIRTUAL_HOST=php"
 #        - "-e VIRTUAL_PORT=9000"
-        - "--network=container:nginx-proxy php -h php"
+        - "--network=container:nginx-proxy"
         - "--rm"
     mysql:
       image: "mysql:latest"
