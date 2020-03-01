@@ -33,7 +33,8 @@ docker-containers:
         - "-e LETSENCRYPT_HOST=www.jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /var/www/www.jasonernst.com/:/var/www/html/"
-        - "--network=bridge"
+        - "--network=backend"
+        - "--network=frontend"
         - "--rm"
     dev.jasonernst.com:
       image: "compscidr/apache:0.4.0"
@@ -45,7 +46,8 @@ docker-containers:
         - "-e LETSENCRYPT_HOST=dev.jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
-        - "--network=bridge"
+        - "--network=backend"
+        - "--network=frontend"
         - "--rm"
     php:
       image: "compscidr/php:0.4.0"
@@ -54,14 +56,12 @@ docker-containers:
         - "-p 9000:9000"
         - "-e VIRTUAL_HOST=php"
         - "-e VIRTUAL_PORT=9000"
-        - "--network=bridge"
-        - "--network-alias=php"
+        - "--network=backend"
         - "--rm"
     mysql:
       image: "mysql:latest"
       cmd:
       runoptions:
         - "-e MYSQL_ROOT_PASSWORD=rootpassword"
-        - "--network=bridge"
-        - "--network-alias=mysql"
+        - "--network=backend"
         - "--rm"
