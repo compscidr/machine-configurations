@@ -49,7 +49,7 @@ docker-containers:
       image: "compscidr/php:0.1.0"
       cmd:
       runoptions:
-        - "p 9000"
+        - "-p 9000"
         - "--rm"
     mysql:
       image: "mysql:latest"
