@@ -24,7 +24,7 @@ docker-containers:
         - "--network=bridge"
         - "--rm"
     www.jasonernst.com:
-      image: "compscidr/apache:0.1.0"
+      image: "compscidr/apache:0.2.0"
       cmd:
       runoptions:
         - "-p 8080"
@@ -35,7 +35,7 @@ docker-containers:
         - "-v /var/www/www.jasonernst.com/:/var/www/html/"
         - "--rm"
     dev.jasonernst.com:
-      image: "compscidr/apache:0.1.0"
+      image: "compscidr/apache:0.2.0"
       cmd:
       runoptions:
         - "-p 8080"
@@ -46,7 +46,7 @@ docker-containers:
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
         - "--rm"
     php:
-      image: "compscidr/php:0.1.0"
+      image: "compscidr/php:0.2.0"
       cmd:
       runoptions:
         - "-p 9000:9000"
