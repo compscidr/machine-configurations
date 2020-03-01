@@ -1,41 +1,46 @@
-# machine-configurations
+# Machine-configurations
 This is a collection of machine configurations along with a salt master to
 provide a controlled, consistent environment across a variety of machines
 with as little work as possible.
 
 Goals:
-- simple initial deployment - ideally with a script after a barebones OS has
+- [x] simple initial deployment - ideally with a script after a barebones OS has
 been installed. 
-- segregated secrets from infrastructure scripts so they aren't committed to
+- [x] segregated secrets from infrastructure scripts so they aren't committed to
 repositories.
-- ability to move hosted sites around to other machines
-- ability to isolate environments of various sites from each other
-- ability to not pollute the environment of the main OS
-- dev / staging / production evironments for each site
-- automatic backup of data (all source should be on github)
+- [x] ability to move hosted sites around to other machines
+- [x] ability to isolate environments of various sites from each other
+- [x] ability to not pollute the environment of the main OS
+- [x] dev / staging / production evironments for each site
+- [x] automatic backup of data (all source should be on github)
+- [x] keep a consistent dev environment so that all of my machines can have
+similar configurations for common tools
 
-The salt master will run on `master.jasonernst.com`. 
+The salt master is on `master.jasonernst.com`. The salt master should also be
+configured to be a salt minion so that it can set itself up. A variety of
+websites are hosted on the same server to save money from getting aws instances.
+Since the server isn't the most reliable it is super important that code is
+stored on github and the content is regularly backed up somewhere else.
 
-Since I'm trying to be cheap, this server will also host a bunch of websites.
-These websites will be hosted on the same machine, each within a docker
-container. In order to do this, there will be an nginx reverse proxy (also
-within its own docker container) which automatically picks up new docker
-containers exposing ports to it.
+Everything is run in docker containers with the philosophy of a single process
+per container. In order to serve the multiple servers from the same machine, I 
+use an nginx reverse proxy. There is a www and dev apache server for each
+website. There is also a www and dev php server for each. The reason for this
+is so the mapping from the master and dev branch points to different web root
+folders for each. The dev folder is located at /var/www/dev.<servername> and
+the www is located at /var/www/www.<servername>. All of the servers also start
+with https enabled by default using letsencrypt. There is a single mysql
+container as well. The php servers and the apache servers must be on the same
+user defined network in order for the proxying to work correctly.
 
-There will likely be a few database containers for the websites to interact
-with.
-
-The idea is that eventually any of these containers can be swapped onto
-other machines, or onto aws if I ever feel like paying money for any of it
-to run.
+Eventually it would be nice to explore using tools like docker-swarm, kubernetes
+or terraform, but I need to figure those tools out first.
 
 ## Master Setup
 Run the `bootstrap-salt-master.sh` script on `master.jasonernst.com` if setting
 it up for the first time. 
 
-
 To setup the docker minions, run `bootstrap-docker.sh`.
-
 
 After a minion starts up, check the key and if it
 is correct, accept it.
@@ -46,7 +51,6 @@ is correct, accept it.
 
 ## Minion Setup
 
-### Standalone Minion
 Minions can be standalone machines or docker minions. In the case of standalone
 machine:
 ```
@@ -54,14 +58,3 @@ curl -L https://bootstrap.saltstack.com -o install_salt.sh
 sudo ./install_salt.sh
 echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
 ```
-
-### Docker minion
-Add minions to the `docker/docker-compose.yml` file and run `docker-compose down`
-followed by `docker-compose up` in the `docker` directory. See the `www.jasonernst.com`
-example. This should build a new docker container based on the DockerFile. This will
-just be a container which extends the minion base image, but then adds an entrypoint
-of `scripts/minion-setup.sh` which should configure the minion to use
-`master.jasonernst.com` and starts the minion after the configuration is applied.
-
-### Building the base minion image:
-Run the `docker/scripts/build-docker-base.sh` script with the tag number as a parameter.
