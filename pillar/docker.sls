@@ -11,7 +11,7 @@ docker-containers:
         - "-v html:/usr/share/nginx/html"
         - "-v dhparam:/etc/nginx/dhparam"
         - "-v certs:/etc/nginx/certs:ro"
-        - "-v var/run/docker.sock:/tmp/docker.sock:ro"
+        - "-v /var/run/docker.sock:/tmp/docker.sock:ro"
         - "--network=bridge"
         - "--rm"
 #    myapp:
