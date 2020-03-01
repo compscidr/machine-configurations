@@ -53,7 +53,7 @@ docker-containers:
       image: "compscidr/php:0.5.0"
       cmd:
       runoptions:
-        - "-p 9000:9000"
+        - "-p 9000"
         - "-e VIRTUAL_HOST=www-php"
         - "-e VIRTUAL_PORT=9000"
         - "-v /var/www/www.jasonernst.com/:/var/www/html/"
@@ -63,7 +63,7 @@ docker-containers:
       image: "compscidr/php:0.5.0"
       cmd:
       runoptions:
-        - "-p 9000:9000"
+        - "-p 9000"
         - "-e VIRTUAL_HOST=dev-php"
         - "-e VIRTUAL_PORT=9000"
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
