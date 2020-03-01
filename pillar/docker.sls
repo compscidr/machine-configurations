@@ -14,6 +14,16 @@ docker-containers:
         - "-v /var/run/docker.sock:/tmp/docker.sock:ro"
         - "--network=bridge"
         - "--rm"
+    letsencrypt:
+      image: "jrcs/letsencrypt-nginx-proxy-companion"
+      cmd:
+      runoptions:
+        - "-v certs:/etc/nginx/certs:rw"
+        - "-v /var/run/docker.sock:/var/run/docker.sock:ro"
+        - "-volumes-from nginx-proxy"
+        - "--network=bridge"
+        - "--rm"
+
 #    myapp:
 #      image: "myregistry.com:5000/training/app:3.0"
 #      args:
