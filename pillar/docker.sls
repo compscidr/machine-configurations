@@ -27,9 +27,10 @@ docker-containers:
       image: "compscidr/apache:0.1.0"
       cmd:
       runoptions:
-        - "-p 8080:8080"
+        - "-p 8080"
         - "-e VIRTUAL_HOST=www.jasonernst.com"
         - "-e VIRTUAL_PORT=8080"
+        - "-e --env "LETSENCRYPT_HOST=www.jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /var/www/www.jasonernst.com/:/var/www/html/"
         - "--rm"
