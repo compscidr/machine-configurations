@@ -37,7 +37,7 @@ docker-containers:
       runoptions:
         - "--rm"
     mysql:
-      image: "mysql:5.6.40"
+      image: "mysql:latest"
       cmd:
       runoptions:
         - "--rm"
