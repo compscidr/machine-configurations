@@ -1,3 +1,11 @@
+frontend:
+  docker_network.present:
+    - name: frontend
+
+backend:
+  docker_network.present:
+    - name: backend
+
 # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html
 git-www-jasonernst-com:
   git.latest:
