@@ -50,7 +50,6 @@ docker-containers:
         - "--rm"
     www-php:
       image: "compscidr/php:0.5.0"
-      name: www-php
       cmd:
       runoptions:
         - "-p 9000:9000"
@@ -62,7 +61,6 @@ docker-containers:
         - "--rm"
     dev-php:
       image: "compscidr/php:0.5.0"
-      name: dev-php
       cmd:
       runoptions:
         - "-p 9000:9000"
