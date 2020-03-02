@@ -25,13 +25,13 @@ git-dev-jasonernst-com:
     - rev: develop
     - target: /var/www/dev.jasonernst.com/
 
-git-www-p2ptrader.io:
+git-www-p2ptrader-io:
   git.latest:
     - name: git@github.com:compscidr/www.p2ptrader.io.git
     - rev: master
     - target: /var/www/www.p2ptrader.io/
 
-git-dev-jasonernst-com:
+git-dev-p2ptrader-io:
   git.latest:
     - name: git@github.com:compscidr/www.p2ptrader.io.git
     - rev: develop
