@@ -70,6 +70,52 @@ docker-containers:
         - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
         - "--network=backend"
         - "--rm"
+    www.p2ptrader.io:
+      image: "compscidr/apache:0.5.0"
+      cmd:
+      runoptions:
+        - "-p 8080"
+        - "-e VIRTUAL_HOST=www.p2ptrader.io"
+        - "-e VIRTUAL_PORT=8080"
+        - "-e LETSENCRYPT_HOST=www.p2ptrader.io"
+        - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
+        - "-e PHP_HOST=www-p2p-php"
+        - "-v /var/www/www.p2ptrader.io/:/var/www/html/"
+        - "--network=bridge"
+        - "--rm"
+    dev.p2ptrader.io:
+      image: "compscidr/apache:0.5.0"
+      cmd:
+      runoptions:
+        - "-p 8080"
+        - "-e VIRTUAL_HOST=dev.p2ptrader.io"
+        - "-e VIRTUAL_PORT=8080"
+        - "-e LETSENCRYPT_HOST=dev.p2ptrader.io"
+        - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
+        - "-e PHP_HOST=dev-p2p-php"
+        - "-v /var/www/dev.p2ptrader.io/:/var/www/html/"
+        - "--network=bridge"
+        - "--rm"
+    www-p2p-php:
+      image: "compscidr/php:0.5.0"
+      cmd:
+      runoptions:
+        - "-p 9000"
+        - "-e VIRTUAL_HOST=www-php"
+        - "-e VIRTUAL_PORT=9000"
+        - "-v /var/www/www.p2ptrader.io/:/var/www/html/"
+        - "--network=backend"
+        - "--rm"
+    dev-p2p-php:
+      image: "compscidr/php:0.5.0"
+      cmd:
+      runoptions:
+        - "-p 9000"
+        - "-e VIRTUAL_HOST=dev-php"
+        - "-e VIRTUAL_PORT=9000"
+        - "-v /var/www/dev.p2ptrader.io/:/var/www/html/"
+        - "--network=backend"
+        - "--rm"
     mysql:
       image: "mysql:latest"
       cmd:
