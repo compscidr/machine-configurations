@@ -28,7 +28,7 @@ docker-containers:
       cmd:
       runoptions:
         - "-p 8080"
-        - "-e VIRTUAL_HOST=www.jasonernst.com"
+        - "-e VIRTUAL_HOST=www.jasonernst.com,jasonernst.com"
         - "-e VIRTUAL_PORT=8080"
         - "-e LETSENCRYPT_HOST=www.jasonernst.com,jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
@@ -74,7 +74,7 @@ docker-containers:
       cmd:
       runoptions:
         - "-p 8080"
-        - "-e VIRTUAL_HOST=www.p2ptrader.io"
+        - "-e VIRTUAL_HOST=www.p2ptrader.io,p2ptrader.io"
         - "-e VIRTUAL_PORT=8080"
         - "-e LETSENCRYPT_HOST=www.p2ptrader.io,p2ptrader.io"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
