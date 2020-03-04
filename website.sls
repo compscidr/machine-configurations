@@ -20,24 +20,24 @@ backend:
 git-www-jasonernst-com:
   git.latest:
     - name: git@github.com:compscidr/www.jasonernst.com.git
-    - rev: master
+    - branch: master
     - target: /var/www/www.jasonernst.com/
 
 git-dev-jasonernst-com:
   git.latest:
     - name: git@github.com:compscidr/www.jasonernst.com.git
-    - rev: develop
+    - branch: develop
     - target: /var/www/dev.jasonernst.com/
 
 git-www-p2ptrader-io:
   git.latest:
     - name: git@github.com:compscidr/www.p2ptrader.io.git
-    - rev: master
+    - branch: master
     - target: /var/www/www.p2ptrader.io/
 
 git-dev-p2ptrader-io:
   git.latest:
     - name: git@github.com:compscidr/www.p2ptrader.io.git
-    - rev: develop
+    - branch: develop
     - target: /var/www/www.p2ptrader.io/
 
