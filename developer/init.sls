@@ -8,3 +8,4 @@ developer_packages:
       - virtualenv
       - python-dev
       - libpython-all-dev
+      - atom
