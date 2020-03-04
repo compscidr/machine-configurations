@@ -2,6 +2,11 @@ include:
   - .nano
 
 developer_packages:
+  pkgrepo.managed:
+    - name: deb https://packagecloud.io/AtomEditor/atom/any/ any main
+    - file: /etc/apt/sources.list.d/atom.list
+    - key_url: https://packagecloud.io/AtomEditor/atom/gpgkey
+
   pkg.installed:
     - pkgs:
       - build-essential
