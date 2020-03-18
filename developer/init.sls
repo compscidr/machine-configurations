@@ -16,7 +16,7 @@ developer_packages:
       - atom
 
 templates:
-  /home/jason/Templates/Untitled Document:
+  - /home/jason/Templates/Untitled Document:
     file.managed:
       - contents: ''
       - contents_newline: False
