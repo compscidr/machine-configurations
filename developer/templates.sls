@@ -2,3 +2,4 @@
   file.managed:
     - contents: ''
     - contents_newline: False
+    - makedirs: True
