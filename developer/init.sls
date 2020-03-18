@@ -15,6 +15,7 @@ developer_packages:
       - libpython-all-dev
       - atom
       - arp-scan
+      - nmap
 
 "/home/jason/Templates/Untitled Document":
   file.managed:
