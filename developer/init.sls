@@ -15,8 +15,7 @@ developer_packages:
       - libpython-all-dev
       - atom
 
-templates:
-  - /home/jason/Templates/Untitled Document:
-    - file.managed:
-      - contents: ''
-      - contents_newline: False
+/home/jason/Templates/Untitled Document:
+  - file.managed:
+    - contents: ''
+    - contents_newline: False
