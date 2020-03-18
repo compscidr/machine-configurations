@@ -16,6 +16,7 @@ developer_packages:
       - atom
       - arp-scan
       - nmap
+      - nbtscan
 
 "/home/jason/Templates/Untitled Document":
   file.managed:
