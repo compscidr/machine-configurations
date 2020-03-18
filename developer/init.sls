@@ -1,5 +1,6 @@
 include:
   - .nano
+  - .templates
 
 developer_packages:
   pkgrepo.managed:
@@ -17,8 +18,3 @@ developer_packages:
       - arp-scan
       - nmap
       - nbtscan
-
-"/home/jason/Templates/Untitled Document":
-  file.managed:
-    - contents: ''
-    - contents_newline: False
