@@ -1,3 +1,3 @@
-ifps-desktop:
-  snap.install:
-    - name: ipfs-desktop
+snaps:
+  wanted:
+    - ipfs-desktop
