@@ -8,7 +8,7 @@ minecraft_packages:
       - screen
 
 minecraft:
-  user.present: []
+  user.present:
     - createhome: False
 
 minecraft_directories:
