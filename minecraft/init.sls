@@ -11,7 +11,7 @@ minecraft:
 
 {% set minecraft = salt['pillar.get']('minecraft') %}
 
-scaffold minecraft directories:
+minecraft_directories:
   file.directory:
     - makedirs: yes
     - names:
@@ -30,7 +30,7 @@ minecraft_server.jar:
     - require:
       - file: /opt/minecraft/bin
 
-minecraft-upstart:
+minecraft_upstart:
   file.managed:
     - name: /etc/init/minecraft.conf
     - user: root
@@ -39,7 +39,7 @@ minecraft-upstart:
     - source: salt://minecraft/minecraft.conf
     - template: jinja
 
-minecraft-service:
+minecraft_service:
   service:
     - name: minecraft
     - running
