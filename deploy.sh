@@ -5,5 +5,4 @@ git fetch
 git pull
 sudo salt-run fileserver.update
 sudo salt '*' saltutil.refresh_pillar
-sudo salt '*' state.apply
-
+sudo salt '*' -l info state.apply
