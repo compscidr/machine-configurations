@@ -1,10 +1,11 @@
 # inspired from: https://github.com/micaelbergeron/salt.minecraft
 # should consider using vagrant to help with automation
 # also inspired by: http://bobbylikeslinux.net/post/2013/2013-salt-minecraft-fun/
-pkg.installed:
-  - pkgs:
-    - openjdk-11-jre
-    - screen
+minecraft_packages:
+  pkg.installed:
+    - pkgs:
+      - openjdk-11-jre
+      - screen
 
 minecraft:
   user.present: []
