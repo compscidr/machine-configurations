@@ -9,3 +9,4 @@ base:
 
   'jason-ubuntu-desktop':
     - developer
+    - .ipfs

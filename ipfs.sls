@@ -1,0 +1,2 @@
+ifps-desktop:
+  - snap.installed
