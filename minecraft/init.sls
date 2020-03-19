@@ -32,7 +32,7 @@ minecraft_server:
 
 minecraft_upstart:
   file.managed:
-    - name: /etc/systemd/system/minecraft.conf
+    - name: /etc/systemd/system/minecraft.service
     - user: root
     - group: root
     - mode: 644
