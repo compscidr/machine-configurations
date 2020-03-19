@@ -44,4 +44,4 @@ minecraft_service:
     - name: minecraft
     - running
     - require:
-      - file: minecraft-upstart
+      - file: minecraft_upstart
