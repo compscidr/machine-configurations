@@ -5,6 +5,7 @@ base:
     - docker.containers
     - developer
     - .website
+    - minecraft
 
   'jason-ubuntu-desktop':
     - developer
