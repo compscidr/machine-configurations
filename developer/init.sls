@@ -10,6 +10,7 @@ developer_packages:
 
   pkg.installed:
     - pkgs:
+      - openjdk-11-jdk
       - build-essential
       - virtualenv
       - python-dev
