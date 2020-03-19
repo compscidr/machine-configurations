@@ -1,2 +1,3 @@
 ifps-desktop:
-  snap.install: []
+  snap.install:
+    - name: ipfs-desktop
