@@ -1,2 +1,2 @@
 ifps-desktop:
-  snap.installed: []
+  snap.install: []
