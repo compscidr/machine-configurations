@@ -10,16 +10,14 @@ minecraft_packages:
 minecraft:
   user.present: []
 
-# {% set minecraft = salt['pillar.get']('minecraft') %}
-#
-# minecraft_directories:
-#   file.directory:
-#     - makedirs: yes
-#     - names:
-#       - /opt/minecraft/bin
-#     - user: minecraft
-#     - mode: 755
-#
+minecraft_directories:
+  file.directory:
+    - makedirs: yes
+    - names:
+      - /opt/minecraft/bin
+    - user: minecraft
+    - mode: 755
+
 # minecraft_server.jar:
 #   file.managed:
 #     - source: https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar
