@@ -22,7 +22,7 @@ minecraft_directories:
 minecraft_server:
   file.managed:
     - source: https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar
-    - source_hash: checksum: sha1=bb2b6b1aefcd70dfd1892149ac3a215f6c636b07
+    - source_hash: sha1=bb2b6b1aefcd70dfd1892149ac3a215f6c636b07
     - user: minecraft
     - group: minecraft
     - name: /opt/minecraft/bin/minecraft_server.jar
