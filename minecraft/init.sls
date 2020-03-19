@@ -30,18 +30,18 @@ minecraft_server:
     - require:
       - file: /opt/minecraft/bin
 
-# minecraft_upstart:
-#   file.managed:
-#     - name: /etc/init/minecraft.conf
-#     - user: root
-#     - group: root
-#     - mode: 644
-#     - source: salt://minecraft/minecraft.conf
-#     - template: jinja
-#
-# minecraft_service:
-#   service:
-#     - name: minecraft
-#     - running
-#     - require:
-#       - file: minecraft-upstart
+minecraft_upstart:
+  file.managed:
+    - name: /etc/init/minecraft.conf
+    - user: root
+    - group: root
+    - mode: 644
+    - source: salt://minecraft/minecraft.conf
+    - template: jinja
+
+minecraft_service:
+  service:
+    - name: minecraft
+    - running
+    - require:
+      - file: minecraft-upstart
