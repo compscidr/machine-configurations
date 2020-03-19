@@ -9,6 +9,7 @@ minecraft_packages:
 
 minecraft:
   user.present: []
+    - createhome: False
 
 minecraft_directories:
   file.directory:
