@@ -1,3 +1,4 @@
-snaps:
-  wanted:
-    - ipfs-desktop
+ipfs:
+  snaps:
+    wanted:
+      - ipfs-desktop
