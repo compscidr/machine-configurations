@@ -9,39 +9,39 @@ pkg.installed:
 minecraft:
   user.present: []
 
-{% set minecraft = salt['pillar.get']('minecraft') %}
-
-minecraft_directories:
-  file.directory:
-    - makedirs: yes
-    - names:
-      - /opt/minecraft/bin
-    - user: minecraft
-    - mode: 755
-
-minecraft_server.jar:
-  file.managed:
-    - source: https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar
-    - source_hash: checksum: sha1=bb2b6b1aefcd70dfd1892149ac3a215f6c636b07
-    - user: minecraft
-    - group: minecraft
-    - name: /opt/minecraft/bin/minecraft_server.jar
-    - mode: 755
-    - require:
-      - file: /opt/minecraft/bin
-
-minecraft_upstart:
-  file.managed:
-    - name: /etc/init/minecraft.conf
-    - user: root
-    - group: root
-    - mode: 644
-    - source: salt://minecraft/minecraft.conf
-    - template: jinja
-
-minecraft_service:
-  service:
-    - name: minecraft
-    - running
-    - require:
-      - file: minecraft-upstart
+# {% set minecraft = salt['pillar.get']('minecraft') %}
+#
+# minecraft_directories:
+#   file.directory:
+#     - makedirs: yes
+#     - names:
+#       - /opt/minecraft/bin
+#     - user: minecraft
+#     - mode: 755
+#
+# minecraft_server.jar:
+#   file.managed:
+#     - source: https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar
+#     - source_hash: checksum: sha1=bb2b6b1aefcd70dfd1892149ac3a215f6c636b07
+#     - user: minecraft
+#     - group: minecraft
+#     - name: /opt/minecraft/bin/minecraft_server.jar
+#     - mode: 755
+#     - require:
+#       - file: /opt/minecraft/bin
+#
+# minecraft_upstart:
+#   file.managed:
+#     - name: /etc/init/minecraft.conf
+#     - user: root
+#     - group: root
+#     - mode: 644
+#     - source: salt://minecraft/minecraft.conf
+#     - template: jinja
+#
+# minecraft_service:
+#   service:
+#     - name: minecraft
+#     - running
+#     - require:
+#       - file: minecraft-upstart
