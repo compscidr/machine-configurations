@@ -1,4 +1,3 @@
-ipfs:
-  snaps:
-    wanted:
-      - ipfs-desktop
+ipfs_packages:
+  snap.installed:
+    - name: ipfs.desktop
