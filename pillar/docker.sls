@@ -122,3 +122,9 @@ docker-containers:
         - "-e MYSQL_ROOT_PASSWORD=rootpassword"
         - "--network=backend"
         - "--rm"
+    stellar-core:
+      image: stellar/quickstart
+      cmd:
+      runoptions:
+        - "-e VIRTUAL_PORT=8000,11626,11625"
+        - "--pubnet"
