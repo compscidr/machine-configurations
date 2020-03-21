@@ -25,7 +25,7 @@ venv:
   virtualenv.managed:
     - name: /opt/eth-proxy/venv
     - system_site_packages: False
-    - requirements: salt://eth-proxy/requirements.txt
+    - requirements: /opt/eth-proxy/requirements.txt
 
 eth-proxy_upstart:
   file.managed:
