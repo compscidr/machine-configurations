@@ -15,7 +15,6 @@ git-eth-proxy:
     - name: https://github.com/Atrides/eth-proxy.git
     - rev: master
     - target: /opt/eth-proxy
-    - force_reset: True
     - user: eth-proxy
 
 eth-proxy-config:
