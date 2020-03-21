@@ -1,0 +1,16 @@
+[Unit]
+Description=Eth-Proxy Server: %i
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/eth-proxy/%i
+
+User=minecraft
+Group=minecraft
+
+Restart=always
+
+ExecStart=/usr/bin/screen -DmS mc-%i /usr/bin/python /opt/eth-proxy/eth-proxy
+
+[Install]
+WantedBy=multi-user.target

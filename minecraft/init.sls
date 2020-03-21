@@ -36,7 +36,7 @@ minecraft_upstart:
     - user: root
     - group: root
     - mode: 644
-    - source: salt://minecraft/minecraft.conf
+    - source: salt://minecraft/minecraft.service
     - template: jinja
 
 minecraft_service:

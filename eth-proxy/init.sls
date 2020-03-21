@@ -14,3 +14,19 @@ config:
   file.managed:
     - name: /opt/eth-proxy/eth-proxy.conf
     - source: salt://eth-proxy/eth-proxy.conf
+
+eth-proxy_upstart:
+  file.managed:
+    - name: /etc/systemd/system/eth-proxy.service
+    - user: root
+    - group: root
+    - mode: 644
+    - source: salt://eth-proxy/eth-proxy.service
+    - template: jinja
+
+eth-proxy_service:
+  service:
+    - name: eth-proxy
+    - running
+    - require:
+      - file: eth-proxy_upstart
