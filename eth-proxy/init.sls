@@ -21,6 +21,12 @@ config:
     - name: /opt/eth-proxy/eth-proxy.conf
     - source: salt://eth-proxy/eth-proxy.conf
 
+venv:
+  virtualenv.managed:
+    - name: /opt/eth-proxy/venv
+    - system_site_packages: False
+    - requirements: salt://eth-proxy/requirements.txt
+
 eth-proxy_upstart:
   file.managed:
     - name: /etc/systemd/system/eth-proxy.service
