@@ -2,6 +2,7 @@ base:
 
   'master.jasonernst.com':
     - master
+    - nvidia.install
     - docker
     - docker.containers
     - developer
