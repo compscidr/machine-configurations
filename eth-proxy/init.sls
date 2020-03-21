@@ -1,7 +1,13 @@
+eth-proxy:
+  user.present:
+    - createhome: False
+
 create_dir:
   file.directory:
     - name: /opt/eth-proxy
     - makedirs: True
+    - user: eth-proxy
+    - mode: 755
 
 git-eth-proxy:
   git.latest:
