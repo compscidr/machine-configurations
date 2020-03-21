@@ -1,7 +1,8 @@
 amdgpu-pro-drivers:
 
-  "wget https://drivers.amd.com/drivers/linux/19.50/amdgpu-pro-19.50-967956-ubuntu-18.04.tar.xz --referer https://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx -O /tmp/radeon.tar.xz":
-    cmd.run:
+  download-driver:
+    - cmd.run:
+      - name: "wget https://drivers.amd.com/drivers/linux/19.50/amdgpu-pro-19.50-967956-ubuntu-18.04.tar.xz --referer https://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx -O /tmp/radeon.tar.xz"
       - creates: /tmp/radeon.tar.xz
 
   archive.extracted:
