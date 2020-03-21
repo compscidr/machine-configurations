@@ -20,3 +20,4 @@ ethminer-download:
   archive.extracted:
     - name: /opt/eth-miner
     - source: https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
+    - source_hash: sha512=35e08c7eca64a3595276cbff632d71c4dad355841c86c1838eb6e11068350f3447d31b72d5204547844efd5a193bea7631b21cf5f647acee8584e8e5549d88d8
