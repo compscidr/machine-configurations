@@ -30,7 +30,7 @@ ethminer_upstart:
     - user: root
     - group: root
     - mode: 644
-    - source: salt://eth-proxy/ethminer.service
+    - source: salt://eth-miner/ethminer.service
     - template: jinja
 
 ethminer_service:
