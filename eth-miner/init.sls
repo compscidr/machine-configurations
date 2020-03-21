@@ -16,7 +16,7 @@ ethereum-repo:
   pkg.latest:
     - name: ethereum
 
-eth-miner-download:
+ethminer-download:
   archive.extracted:
-    name: /opt/eth-miner
-    source: https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
+    - name: /opt/eth-miner
+    - source: https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-9-linux-x86_64.tar.gz
