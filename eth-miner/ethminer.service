@@ -10,7 +10,7 @@ Group=eth-miner
 
 Restart=always
 
-ExecStart=/usr/bin/screen -DmS eth-miner /opt/eth-miner/bin/ethminer --farm-recheck 200 -G -F http://127.0.0.1:8080/{{opts.id}}
+ExecStart=/usr/bin/screen -DmS eth-miner /opt/eth-miner/bin/ethminer --farm-recheck 200 -G -P http://127.0.0.1:8081/{{opts.id}}
 
 [Install]
 WantedBy=multi-user.target
