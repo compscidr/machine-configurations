@@ -10,7 +10,7 @@ Group=eth-proxy
 
 Restart=always
 
-ExecStart=/usr/bin/screen -DmS eth-proxy /opt/eth-proxy/venv/bin/python /opt/eth-proxy/eth-proxy
+ExecStart=/usr/bin/screen -DmS eth-proxy /opt/eth-proxy/venv/bin/python /opt/eth-proxy/eth-proxy.py
 
 [Install]
 WantedBy=multi-user.target
