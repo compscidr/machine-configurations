@@ -17,7 +17,7 @@ prepare-arch:
 
 uninstall-old-driver:
   cmd.run:
-    - name: "bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install --uninstall -y"
+    - name: "yes | bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install --uninstall"
     - requires: extract-driver
 
 install-driver:
