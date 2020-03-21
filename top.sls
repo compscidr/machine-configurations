@@ -2,7 +2,7 @@ base:
 
   'master.jasonernst.com':
     - master
-    - nvidia.install
+    - amdgpu
     - docker
     - docker.containers
     - developer
