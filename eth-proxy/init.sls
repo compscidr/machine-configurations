@@ -18,14 +18,14 @@ git-eth-proxy:
     - force_reset: True
     - user: eth-proxy
 
-config:
+eth-proxy-config:
   file.managed:
     - name: /opt/eth-proxy/eth-proxy.conf
     - source: salt://eth-proxy/eth-proxy.conf
     - user: eth-proxy
     - group: eth-proxy
 
-venv:
+eth-proxy-venv:
   virtualenv.managed:
     - name: /opt/eth-proxy/venv
     - system_site_packages: False
@@ -47,3 +47,4 @@ eth-proxy_service:
     - running
     - require:
       - file: eth-proxy_upstart
+      - file: eth-proxy-config
