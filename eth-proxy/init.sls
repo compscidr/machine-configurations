@@ -2,7 +2,7 @@ eth-proxy:
   user.present:
     - createhome: False
 
-create_dir:
+eth-proxy-create_dir:
   file.directory:
     - name: /opt/eth-proxy
     - makedirs: True

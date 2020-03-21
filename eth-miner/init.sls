@@ -2,7 +2,7 @@ eth-miner:
   user.present:
     - createhome: False
 
-create_dir:
+eth-miner-create_dir:
   file.directory:
     - name: /opt/eth-miner
     - makedirs: True
