@@ -20,6 +20,6 @@ prepare-arch:
 
 install-driver:
   cmd.run:
-    - name: "bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install -y --headless"
+    - name: "bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install -y --headless --opencl=legacy"
     - unless: "which amdgpu-pro-uninstall"
     - requires: prepare-arch

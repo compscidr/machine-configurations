@@ -1,3 +1,9 @@
+jason:
+  user.present:
+    - fullname: Jason Ernst
+    - groups:
+      - video
+
 include:
   - .nano
   - .templates
