@@ -11,12 +11,16 @@ extract-driver:
     - creates: /opt/amdgpu-pro-19.50-967956-ubuntu-18.04
     - requires: download-driver
 
-install-driver:
+prepare-arch:
   cmd.run:
     - name: "sudo dpkg --add-architecture i386"
+
+uninstall-old-driver:
   cmd.run:
     - name: "bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install --uninstall"
     - requires: extract-driver
+
+install-driver:
   cmd.run:
     - name: "bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install -y --headless"
-    - requires: extract-driver
+    - requires: uninstall-old-driver
