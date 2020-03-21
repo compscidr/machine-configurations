@@ -7,6 +7,7 @@ create_dir:
     - name: /opt/eth-proxy
     - makedirs: True
     - user: eth-proxy
+    - group: eth-proxy
     - mode: 755
 
 git-eth-proxy:
@@ -15,17 +16,21 @@ git-eth-proxy:
     - rev: master
     - target: /opt/eth-proxy
     - force_reset: True
+    - user: eth-proxy
 
 config:
   file.managed:
     - name: /opt/eth-proxy/eth-proxy.conf
     - source: salt://eth-proxy/eth-proxy.conf
+    - user: eth-proxy
+    - group: eth-proxy
 
 venv:
   virtualenv.managed:
     - name: /opt/eth-proxy/venv
     - system_site_packages: False
     - requirements: /opt/eth-proxy/requirements.txt
+    - user: eth-proxy
 
 eth-proxy_upstart:
   file.managed:
