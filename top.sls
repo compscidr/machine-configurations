@@ -6,6 +6,7 @@ base:
     - developer
     - .website
     - minecraft
+    - eth-proxy
 
   'jason-ubuntu-desktop':
     - developer
