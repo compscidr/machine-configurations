@@ -1,6 +1,7 @@
 download-driver:
   cmd.run:
     - name: "wget https://drivers.amd.com/drivers/linux/19.50/amdgpu-pro-19.50-967956-ubuntu-18.04.tar.xz --referer https://support.amd.com/en-us/kb-articles/Pages/Radeon-Software-for-Linux-Release-Notes.aspx -O /opt/radeon.tar.xz"
+    - unless: "which amdgpu-pro-uninstall"
     - creates: /opt/radeon.tar.xz
 
 extract-driver:
@@ -14,13 +15,9 @@ extract-driver:
 prepare-arch:
   cmd.run:
     - name: "sudo dpkg --add-architecture i386"
-
-uninstall-old-driver:
-  cmd.run:
-    - name: "yes | bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install --uninstall"
     - requires: extract-driver
 
 install-driver:
   cmd.run:
     - name: "bash /opt/amdgpu-pro-19.50-967956-ubuntu-18.04/amdgpu-pro-install -y --headless"
-    - requires: uninstall-old-driver
+    - requires: prepare-arch
