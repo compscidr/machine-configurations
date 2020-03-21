@@ -9,3 +9,12 @@ eth-miner-create_dir:
     - user: eth-miner
     - group: eth-miner
     - mode: 755
+
+eth-miner-repo:
+  pkgrepo.managed:
+    - ppa: ethereum/ethereum
+    - ppa: ethereum/ethereum-dev
+    pkg.installed:
+      - pgks:
+        - ethereum
+        - ethminer
