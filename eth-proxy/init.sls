@@ -9,3 +9,8 @@ git-eth-proxy:
     - rev: master
     - target: /opt/eth-proxy
     - force_reset: True
+
+config:
+  file.managed:
+    - name: /opt/eth-proxy/eth-proxy.conf
+    - source: salt://eth-proxy/eth-proxy.conf
