@@ -14,8 +14,8 @@ ExecStart=/opt/eth-miner/bin/ethminer --farm-recheck 2000 -U -G -P stratum1+tcp:
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStop=/bin/kill -15 $MAINPID
 
-StandardOutput=file:/var/log/eth-miner/stdout.log
-StandardError=file:/var/log/eth-minder/stderr.log
+StandardOutput=file:/var/log/eth-miner-stdout.log
+StandardError=file:/var/log/eth-miner-stderr.log
 
 [Install]
 WantedBy=multi-user.target
