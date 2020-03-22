@@ -10,7 +10,9 @@ Group=eth-miner
 
 Restart=always
 
-ExecStart=/usr/bin/screen -DmS eth-miner /opt/eth-miner/bin/ethminer --farm-recheck 2000 -U -G -P stratum1+tcp://0x74ba897f65f04008d8eff364efcc54b0a20e17eb.{{opts.id}}@eth.2miners.com:2020
+ExecStart=/opt/eth-miner/bin/ethminer --farm-recheck 2000 -U -G -P stratum1+tcp://0x74ba897f65f04008d8eff364efcc54b0a20e17eb.{{opts.id}}@eth.2miners.com:2020
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill -15 $MAINPID
 
 [Install]
 WantedBy=multi-user.target
