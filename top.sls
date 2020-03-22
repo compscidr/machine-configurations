@@ -8,7 +8,6 @@ base:
     - developer
     - .website
     - minecraft
-    - eth-proxy
     - eth-miner
 
   'jason-ubuntu-desktop':
