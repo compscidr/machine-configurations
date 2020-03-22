@@ -73,6 +73,9 @@ echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-
 ## TODO:
 - [ ] stellar validator (WiP)
 - [ ] ethereum full node (WiP)
+- [ ] golem
+- [ ] ipfs
+- [ ] filecoin testnet
 - [ ] ubuntu / debian mirror
 - [ ] tor node
 - [ ] There is a problem with the master restarts, the web servers need to be added
