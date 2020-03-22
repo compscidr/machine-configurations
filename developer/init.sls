@@ -2,6 +2,8 @@ jason:
   user.present:
     - fullname: Jason Ernst
     - groups:
+      - jason
+      - sudo
       - video
 
 include:
