@@ -38,4 +38,4 @@ ethminer_service:
     - name: ethminer
     - running
     - require:
-      - service: eth-proxy
+      - file: ethminer_upstart
