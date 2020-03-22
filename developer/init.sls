@@ -25,3 +25,4 @@ developer_packages:
       - arp-scan
       - nmap
       - nbtscan
+      - speedtest-cli
