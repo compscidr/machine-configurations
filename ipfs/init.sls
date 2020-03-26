@@ -16,5 +16,4 @@ ipfs_service:
   service:
     - name: ipfs
     - running
-    - require:
-      - file: ipfs_systemd
+    - requires: ipfs_systemd
