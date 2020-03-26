@@ -3,17 +3,7 @@ ipfs_desktop:
     - sources:
       - ipfs-desktop: http://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v0.10.4/ipfs-desktop-0.10.4-linux-amd64.deb
 
-ifps_systemd:
+ifps_autostart:
   file.managed:
-    - name: /etc/systemd/system/ipfs.service
-    - user: root
-    - group: root
-    - mode: 644
-    - source: salt://ipfs/ipfs.service
-    - template: jinja
-
-ipfs_service:
-  service:
-    - name: ipfs
-    - running
-    - requires: ipfs_systemd
+    - name: /home/jason/.config/autostart/ipfs-desktop.desktop
+    - source: /usr/share/applications/ipfs-desktop.desktop
