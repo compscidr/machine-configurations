@@ -17,3 +17,7 @@ go_env:
   file.append:
     - name: /etc/environment
     - text: "export PATH=$PATH:/opt/go/bin"
+
+go_source:
+  cmd.run:
+    - name: "source /etc/environment"
