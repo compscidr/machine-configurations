@@ -5,10 +5,7 @@ jason:
       - jason
       - sudo
       - video
-
-include:
-  - .nano
-  - .templates
+      - docker
 
 developer_packages:
   pkgrepo.managed:
@@ -28,3 +25,8 @@ developer_packages:
       - nmap
       - nbtscan
       - speedtest-cli
+
+include:
+  - .nano
+  - .templates
+  - .go
