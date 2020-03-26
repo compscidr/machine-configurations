@@ -14,9 +14,10 @@ go_extract:
     - requires: go_download
 
 go_env:
-  file.append:
-    - name: /etc/environment
-    - text: "export PATH=$PATH:/opt/go/bin"
+  cmd.run:
+    - name: |
+        sed -e 's|/opt/go/bin:||g' -i /etc/environment
+        sed -e 's|PATH="\(.*\)"|PATH="/opt/go/bin:\1"|g' -i /etc/environment
 
 go_source:
   cmd.run:
