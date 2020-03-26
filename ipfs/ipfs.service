@@ -1,0 +1,8 @@
+[Unit]
+Description=Ipfs
+
+[Service]
+ExecStart="/opt/IPFS Desktop/ipfs-desktop" --no-sandbox %U
+
+[Install]
+WantedBy=multi-user.target
