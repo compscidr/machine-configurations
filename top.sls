@@ -13,3 +13,7 @@ base:
   'jason-ubuntu-desktop':
     - developer
     - .ipfs
+
+  'jason-asus-ubuntu':
+    - developer
+    - .ipfs
