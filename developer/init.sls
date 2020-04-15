@@ -15,6 +15,7 @@ developer_packages:
 
   pkg.installed:
     - pkgs:
+      - ssh
       - openjdk-11-jdk
       - build-essential
       - virtualenv
