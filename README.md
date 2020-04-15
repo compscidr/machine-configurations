@@ -75,7 +75,7 @@ sudo apt-get install salt-minion
 
 Update the config to point to the master:
 ```
-echo 'master_type: failover\nmaster: \n  - master.jasonernst.com\n  - 10.0.0.116' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
+printf 'master_type: failover\nmaster: \n  - master.jasonernst.com\n  - 10.0.0.116\n' | sudo tee /etc/salt/minion.d/99-master-address.conf
 sudo service salt-minion restart
 ```
 
