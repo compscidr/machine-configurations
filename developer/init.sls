@@ -16,6 +16,7 @@ developer_packages:
   pkg.installed:
     - pkgs:
       - ssh
+      - net-tools
       - openjdk-11-jdk
       - build-essential
       - virtualenv
