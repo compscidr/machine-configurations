@@ -65,8 +65,7 @@ is correct, accept it.
 Minions can be standalone machines or docker minions. In the case of standalone
 machine:
 ```
-curl -L https://bootstrap.saltstack.com -o install_salt.sh
-sudo ./install_salt.sh
+curl -s https://bootstrap.saltstack.com | sudo bash
 echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
 ```
 
