@@ -48,7 +48,7 @@ Eventually it would be nice to explore using tools like docker-swarm, kubernetes
 or terraform, but I need to figure those tools out first.
 
 ## Master Setup
-Run the `bootstrap-salt-master.sh` script on `master.jasonernst.com` if setting
+Run the `bootstrap-env.sh` script on `master.jasonernst.com` if setting
 it up for the first time. 
 
 To setup the docker minions, run `bootstrap-docker.sh`.
@@ -65,7 +65,7 @@ is correct, accept it.
 Minions can be standalone machines or docker minions. In the case of standalone
 machine:
 ```
-curl -s https://bootstrap.saltstack.com | sudo bash
+curl -s https://bootstrap.saltstack.com | sudo bash -s -- -x python3 stable 2019.2
 echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
 ```
 
