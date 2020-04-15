@@ -66,7 +66,7 @@ Minions can be standalone machines or docker minions. In the case of standalone
 machine (does not work on ubuntu 19.10):
 ```
 curl -s https://bootstrap.saltstack.com | sudo bash -s -- -x python3 stable 2019.2
-echo 'master: master.jasonernst.com' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
+echo 'master_type: failover\nmaster: \n  - master.jasonernst.com\n  - 10.0.0.116' | sudo tee -a /etc/salt/minion.d/99-master-address.conf
 ```
 
 On Ubunut 19.10, simply use
