@@ -1,3 +1,8 @@
+docker:
+  group.present
+video:
+  group.present
+
 jason:
   user.present:
     - fullname: Jason Ernst
