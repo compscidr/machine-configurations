@@ -3,7 +3,7 @@
 python_download:
   file.managed:
     - source: https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
-    - source_hash: sha1=bb2b6b1aefcd70dfd1892149ac3a215f6c636b07
+    - source_hash: md5=48f393a04c2e66c77bfc114e589ec630
     - name: /usr/src/Python-3.6.8.tgz
     - mode: 755
 
