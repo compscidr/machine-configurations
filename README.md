@@ -80,6 +80,7 @@ sudo service salt-minion restart
 ```
 
 ## TODO:
+- [ ] salt-api to allow salt calls via web: https://bencane.com/2014/07/17/integrating-saltstack-with-other-services-via-salt-api/ (hook into github webhooks so that git push can trigger filesystem update)
 - [ ] stellar validator (WiP)
 - [ ] ethereum full node (WiP)
 - [ ] golem
