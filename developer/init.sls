@@ -20,9 +20,10 @@ developer_packages:
 
   pkg.installed:
     - pkgs:
+      - gnupg2                  # required for docker login to work
       - docker.io
       - ssh
-      - net-tools
+      - net-tools               # ifconfig
       - openjdk-11-jdk
       - build-essential
       - virtualenv
