@@ -38,3 +38,4 @@ include:
   - .nano
   - .templates
   - .go
+  - .python
