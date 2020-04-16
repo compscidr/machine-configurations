@@ -8,7 +8,7 @@ go_download:
 
 go_extract:
   archive.extracted:
-    - name: /opt
+    - name: /opt/go
     - source: /opt/go1.14.1.linux-amd64.tar.gz
     - source_hash: sha256=2f49eb17ce8b48c680cdb166ffd7389702c0dec6effa090c324804a5cac8a7f8
     - requires: go_download

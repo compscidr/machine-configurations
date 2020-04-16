@@ -9,6 +9,7 @@ python_download:
 
 python_extract:
   archive.extracted:
+    - name: /usr/src/Python-3.6.8
     - source: /usr/src/Python-3.6.8.tgz
     - source_hash: md5=48f393a04c2e66c77bfc114e589ec630
     - requires: python_download
