@@ -19,4 +19,4 @@ go_env:
         sed -e 's|/opt/go/bin:||g' -i /etc/environment
         sed -e 's|PATH="\(.*\)"|PATH="/opt/go/bin:\1"|g' -i /etc/environment
     - requires: go_extract
-    - unless: "cat /etc/environment | grep "/opt/go/bin"
+    - unless: 'cat /etc/environment | grep "/opt/go/bin"'
