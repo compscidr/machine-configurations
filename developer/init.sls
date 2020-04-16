@@ -20,6 +20,7 @@ developer_packages:
 
   pkg.installed:
     - pkgs:
+      - docker.io
       - ssh
       - net-tools
       - openjdk-11-jdk
