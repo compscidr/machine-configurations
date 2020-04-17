@@ -5,16 +5,16 @@ docker-registries:
     username: compscidr
     password: |
       -----BEGIN PGP MESSAGE-----
-      hQGMAz1m4hDhhE8HAQwAvkdQx6J9DMtclp7LujXh1pr7KdLhDVLqpcpK1eASLUFZ
-      3BjhAZqgwvexBwUd5WE+kkYRxE/AcAP9BIf+ZtiP0r7jYQL4IqsFYahtNkOY19aq
-      4K+xJ2TeJPNGTHXY/FCQxIgjINd/xFEqY9KHfMZLIBzw+gkK4pF19QXe6i7MpBj6
-      pafQvfdGYG8oSTWNmupMExQaek8qJiRWAE/boa87eNw0/S29681C9Bc4LIErLmFp
-      n5CGFPueqW+9U33eKKD79slSveXANxQBQrBbETlgPEjDsY9+xJuGZQGP17TP2N6l
-      WT7fHk7PyJ8+AGcGxKYqDfZ6FQIDpgja0sk5J+7s23nw/iHi6QY2eyL49fAEEXeb
-      QaAOvyxBvAC+urLMwNLITwYlpAnHbSC8KKlwRTckdf+2fmJxUO+eTw7t3aryi9dV
-      ip6HeQ8Wg0dfoqVlDW4GivgArmC0ejlMaB/jo9PmkFJbscJznqThqZ/Iy42ifAQf
-      2T1y5SrOe9yBvW81YJ0P0lEB7UnmOLH5BtNItAqU6uGYOmb8IzNblJll77PDzFrV
-      UksYvtIIm7fnswGX7099E3Ie1OFhua/glGmgCyjWJvRn4Zwogw/mwMT5eTaqokNP
-      2l0=
-      =5aw6
+      hQGMAz1m4hDhhE8HAQv/Y1WE+lo2njpowfloyghx/vkh//BDl+4ITJ1FbuDJe3nt
+      IuKEwE1An/jqo8eY3a6Ua5WvB8qbhZlyqoerhweoB0ppfT8/JXPihyOls+a0WrB/
+      YLB1Ky2XbsfG6qBh0dn+kdJYSqaqFIFQCS0NIlprkvdh6crRzoDNmbl9TDt5G8y7
+      1ER0I8xc9MeMAlcHwjEZIMWucM+Nf7P2ExQlRFAvKKCPIczrVHba7DG94VuRldG/
+      IPlJ6g7/Knz6wYcgaKW7Z8r9YY9H4/0W7iCYxAld1+Dvlv18jezMqlrSb5nhqo8l
+      xRhxK4keYyFlx+lIjY7piPVqbSHTjTPVb4psOchHkf1Ru+cZRlumVLLOmCwPxIN/
+      namYzTuHztdD8UI45M6cGJ5mwzGeujzanWY8Xg8294imjO5gGm1iZJG4XuejuVDf
+      we8pXXuh7MfXz1gSh/6rUXgPOUSA+n2fOBupPpt4MHzkCid5YvD3kTS58SpwJlQA
+      qqH3XGdX7vCAlp1bIbqr0lMBdFu4OVkXS2RksOSqKEWcMXLebjI1LAG+laE8u0GU
+      CvaaTuDABP5r2BrJ82dfcPqxsozaD0qSpXQ1642QtxXn8eS1r7PBDTpXLKstiaJF
+      2SXwdg==
+      =Avqj
       -----END PGP MESSAGE-----
