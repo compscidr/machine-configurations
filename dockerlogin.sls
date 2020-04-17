@@ -1,7 +1,7 @@
 python-pip:
   pkg.installed
 
-python-pip3:
+python3-pip:
   pkg.installed
 
 docker-py:
