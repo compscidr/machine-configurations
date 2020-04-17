@@ -20,6 +20,7 @@ developer_packages:
 
   pkg.installed:
     - pkgs:
+      - curl
       - gnupg2                  # required for docker login to work
       - docker.io
       - ssh
@@ -41,3 +42,4 @@ include:
   - .go
   - .python
   - .dockerlogin
+  - .keybase
