@@ -40,3 +40,8 @@ include:
   - .templates
   - .go
   - .python
+
+docker.login:
+  module.run:
+    - registries:
+      - hub

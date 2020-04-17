@@ -1,7 +1,7 @@
 base:
   'master.jasonernst.com':
-    - docker
+    - docker-containers
     - nvidia
     - go
   '*':
-    - encrypted
+    - docker-login
