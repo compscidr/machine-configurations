@@ -3,6 +3,7 @@ base:
   'master.jasonernst.com':
     - master
     - amdgpu
+    - .docker-login
     - docker
     - docker.containers
     - developer
