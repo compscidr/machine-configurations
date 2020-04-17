@@ -32,3 +32,4 @@ python_build_install:
   cmd.run:
     - name: "cd /usr/src/Python-3.6.8 && sudo ./configure && sudo make altinstall"
     - requires: python_extract
+    - unless: "python3.6 --version"
