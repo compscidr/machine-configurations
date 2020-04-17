@@ -11,7 +11,6 @@ base:
     - eth-miner
 
   'jason-ubuntu-desktop':
-    - .dockerlogin
     - developer
     - .ipfs
 

@@ -40,3 +40,4 @@ include:
   - .templates
   - .go
   - .python
+  - .dockerlogin
