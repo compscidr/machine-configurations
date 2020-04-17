@@ -3,7 +3,6 @@ base:
   'master.jasonernst.com':
     - master
     - amdgpu
-    - .dockerlogin
     - docker
     - docker.containers
     - developer
@@ -12,6 +11,7 @@ base:
     - eth-miner
 
   'jason-ubuntu-desktop':
+    - .dockerlogin
     - developer
     - .ipfs
 
