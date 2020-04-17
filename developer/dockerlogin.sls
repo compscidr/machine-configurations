@@ -14,10 +14,9 @@ docker.login:
       - hub
 
 # todo copy file to all users home directories hidden folder
-docker-auth:
+/home/jason/.docker/config.json:
   file.managed:
     - source: /root/.docker/config.json
-    - destination: /home/jason/.docker/config.json
     - user: jason
     - group: jason
     - require:
