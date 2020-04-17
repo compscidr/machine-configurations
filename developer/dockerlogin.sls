@@ -1,11 +1,10 @@
-python-pip:
-  pkg.installed
-
-python3-pip:
-  pkg.installed
-
-docker-py:
-  pip.installed
+docker-packages:
+  pkg.installed:
+    - pkgs:
+      - python-pip
+      - python3-pip
+  pip.installed:
+      - docker-py
 
 docker.login:
   module.run:
