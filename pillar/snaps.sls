@@ -3,3 +3,5 @@ packages:
   snaps:
     classic:
       - slack
+      - pycharm-professional
+      - android-studio
