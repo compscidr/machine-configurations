@@ -1,4 +1,5 @@
 # uses https://github.com/compscidr/packages-formula
-snaps:
-  wanted:
-    - slack
+packages:
+  snaps:
+    wanted:
+      - slack
