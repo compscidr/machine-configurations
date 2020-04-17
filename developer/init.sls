@@ -21,6 +21,7 @@ developer_packages:
   pkg.installed:
     - pkgs:
       - curl
+      - wget
       - gnupg2                  # required for docker login to work
       - docker.io
       - ssh
