@@ -41,7 +41,8 @@ include:
   - .go
   - .python
 
-dockermod.login:
+Docker login:
   module.run:
-    - registries:
-      - hub
+    - docker.login:
+      - registries:
+        - hub
