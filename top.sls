@@ -17,3 +17,6 @@ base:
   'jason-asus-ubuntu':
     - developer
     - .ipfs
+
+  '*':
+    - packages
