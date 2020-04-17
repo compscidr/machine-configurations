@@ -1,8 +1,10 @@
-docker-packages:
+docker-apt-packages:
   pkg.installed:
     - pkgs:
       - python-pip
       - python3-pip
+
+docker-pip-packages:
   pip.installed:
       - docker-py
 
