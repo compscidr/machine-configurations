@@ -6,7 +6,7 @@ docker-apt-packages:
 
 docker-pip-packages:
   pip.installed:
-      - docker-py
+      - name: docker-py
 
 docker.login:
   module.run:
