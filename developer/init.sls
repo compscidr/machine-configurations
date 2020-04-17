@@ -35,6 +35,10 @@ developer_packages:
       - nbtscan
       - speedtest-cli
 
+  snap.installed:
+    - pkgs:
+      - slack
+
 include:
   - .nano
   - .templates
