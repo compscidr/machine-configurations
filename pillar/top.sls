@@ -2,6 +2,10 @@ base:
   'master.jasonernst.com':
     - docker-containers
     - nvidia
-    - go
+  'jason-ubuntu-desktop':
+    - snaps
+  'jason-asus-ubuntu':
+    - snaps
   '*':
     - docker-login
+    - go

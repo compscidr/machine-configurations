@@ -35,11 +35,6 @@ developer_packages:
       - nbtscan
       - speedtest-cli
 
-  packages:
-    snaps:
-      required:
-        - slack
-
 include:
   - .nano
   - .templates
