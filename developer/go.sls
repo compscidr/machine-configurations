@@ -20,3 +20,14 @@ go_env:
         sed -e 's|PATH="\(.*\)"|PATH="/opt/go/bin:\1"|g' -i /etc/environment
     - requires: go_extract
     - unless: 'cat /etc/environment | grep "/opt/go/bin"'
+
+go_variables:
+  file.blockreplace:
+    - name: /home/jason/.bashrc
+    - marker_start: '#-- start go managed zone --'
+    - marker_end: '#-- end go managed zone --'
+    - content: |
+        export GOROOT=/opt/go
+        export GOPATH=$HOME/go
+        export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+    - append_if_not_found: True
