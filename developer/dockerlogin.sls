@@ -3,6 +3,9 @@ docker-apt-packages:
     - pkgs:
       - python-pip
       - python3-pip
+  pkg.unwanted:
+    - pkgs:
+      - docker.io
 
 docker-pip-packages:
   pip.installed:
