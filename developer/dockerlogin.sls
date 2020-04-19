@@ -6,6 +6,7 @@ docker-apt-packages-install:
 
 docker-apt-packages-uninstall:
   pkgs.unwanted:
+    - pkgs:
       - docker.io
 
 docker-pip-packages:
