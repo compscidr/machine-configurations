@@ -5,3 +5,4 @@ packages:
       - slack
       - pycharm-professional
       - android-studio
+      - spotify
