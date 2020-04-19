@@ -8,6 +8,10 @@ docker-pip-packages:
   pip.installed:
       - name: docker-py
 
+docker-compose-pip-packages:
+  pip.installed:
+      - name: docker-compose
+
 docker.login:
   module.run:
     - registries:
