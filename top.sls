@@ -6,17 +6,18 @@ base:
     - docker
     - docker.containers
     - developer
-    - .website
+    - website
     - minecraft
     - eth-miner
 
   'jason-ubuntu-desktop':
-    - developer
-    - .ipfs
+    - ipfs
+    - hosts
 
   'jason-asus-ubuntu':
-    - developer
-    - .ipfs
+    - ipfs
+    - hosts
 
   '*':
+    - developer
     - packages
