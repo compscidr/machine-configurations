@@ -9,9 +9,9 @@ docker-apt-packages-uninstall:
     - pkgs:
       - docker.io
 
-docker-pip-packages:
-  pip.installed:
-      - name: docker-py
+# docker-pip-packages:
+#   pip.installed:
+#       - name: docker-py
 
 docker-compose-pip-packages:
   pip.installed:
