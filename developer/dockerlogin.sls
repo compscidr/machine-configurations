@@ -5,8 +5,7 @@ docker-apt-packages-install:
       - python3-pip
 
 docker-apt-packages-uninstall:
-  pkg.unwanted:
-    - pkgs:
+  pkgs.unwanted:
       - docker.io
 
 docker-pip-packages:
