@@ -3,4 +3,4 @@
     - name: /etc/hosts
     - source:
       - salt://config/etc/hosts
-    append_if_not_found: True
+    - append_if_not_found: True
