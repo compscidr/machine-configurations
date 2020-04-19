@@ -36,6 +36,7 @@ developer_packages:
       - nmap
       - nbtscan
       - speedtest-cli
+      - docker-compose
 
 include:
   - .nano
