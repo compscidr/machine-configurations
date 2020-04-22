@@ -10,11 +10,8 @@ docker-apt-packages-uninstall:
     - pkgs:
       - docker.io
 
-# https://github.com/docker/compose/issues/6339
-# docker-pip-packages:
-#   pip.installed:
-#       - name: docker-py
-
+# note pip docker package seems to have superseeded docker-py. DO NOT install
+# docker-py or it will break docker-compose.
 docker-pip-packages:
   pip.installed:
       - name: docker
