@@ -31,7 +31,6 @@ developer_packages:
       - net-tools               # ifconfig
       - nbtscan                 # netbios scanner
       - speedtest-cli           # bandwidth debugging
-      - fish                    # altnerative to bash
 
 include:
   - .nano

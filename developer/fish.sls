@@ -7,4 +7,6 @@ fish-packages:
 oh-my-fish:
   cmd.run:
     - name: "curl -L https://get.oh-my.fish | fish"
-    - unless: "omf list"
+    - unless: |
+      fish
+      omf list
