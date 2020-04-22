@@ -22,20 +22,16 @@ developer_packages:
     - pkgs:
       - curl
       - wget
-      - gnupg2                  # required for docker login to work
-      - docker.io
       - ssh
+      - openjdk-11-jdk          # java sdk
+      - build-essential         # g++, c++, etc.
+      - atom                    # ide
+      - arp-scan                # for ip <-> mac map search
+      - nmap                    # determine open ports
       - net-tools               # ifconfig
-      - openjdk-11-jdk
-      - build-essential
-      - virtualenv
-      - python-dev
-      - libpython-all-dev
-      - atom
-      - arp-scan
-      - nmap
-      - nbtscan
-      - speedtest-cli
+      - nbtscan                 # netbios scanner
+      - speedtest-cli           # bandwidth debugging
+      - fish                    # altnerative to bash
 
 include:
   - .nano

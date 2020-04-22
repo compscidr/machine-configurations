@@ -1,6 +1,9 @@
 python_buildpackages:
   pkg.installed:
     - pkgs:
+      - virtualenv
+      - python-dev
+      - libpython-all-dev
       - build-essential
       - checkinstall
       - libreadline-gplv2-dev
@@ -11,6 +14,9 @@ python_buildpackages:
       - libgdbm-dev
       - libc6-dev
       - libbz2-dev
+      - python-pip
+      - python3-pip
+      - pipenv
 
 # todo make a list of python versions and install all of them alongside the
 # main system version

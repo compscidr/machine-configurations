@@ -1,6 +1,7 @@
 docker-apt-packages-install:
   pkg.installed:
     - pkgs:
+      - gnupg2                  # required for docker login to work
       - python-pip
       - python3-pip
 
@@ -9,9 +10,14 @@ docker-apt-packages-uninstall:
     - pkgs:
       - docker.io
 
+# https://github.com/docker/compose/issues/6339
 # docker-pip-packages:
 #   pip.installed:
 #       - name: docker-py
+
+docker-pip-packages:
+  pip.installed:
+      - name: docker
 
 docker-compose-pip-packages:
   pip.installed:
