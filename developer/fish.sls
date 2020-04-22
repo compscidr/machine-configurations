@@ -17,6 +17,6 @@ oh-my-fish:
 
 bob-the-fish:
   cmd.run:
-    - name: "fish -c omf install bobthefish"
+    - name: "fish -c 'omf install bobthefish'"
     - runas: jason
     - unless: "fish -c 'omf list | grep bobthefish'"
