@@ -4,11 +4,6 @@ docker-apt-packages-install:
       - gnupg2                  # required for docker login to work
       - python-pip
       - python3-pip
-      - apt-transport-https
-      - ca-certificates
-      - curl
-      - gnupg-agent
-      - software-properties-common
 
 docker-apt-packages-uninstall:
   pkg.removed:
