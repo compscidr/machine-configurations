@@ -7,8 +7,16 @@ fish-packages:
     - pkgs:
       - fish
       - curl
+      - fonts-powerline   # fonts for the statusbar
 
 oh-my-fish:
   cmd.run:
     - name: "curl -L https://get.oh-my.fish | fish"
-    - unless: "fish -c omf list"
+    - runas: jason
+    - unless: "fish -c 'omf list'"
+
+bob-the-fish:
+  cmd.run:
+    - name: "fish -c omf install bobthefish"
+    - runas: jason
+    - unless: "fish -c 'omf list | grep bobthefish'"
