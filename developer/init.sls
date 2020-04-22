@@ -40,4 +40,4 @@ include:
   - .python
   - .dockerlogin
   - .keybase
-  - fish
+  - .fish
