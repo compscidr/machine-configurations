@@ -4,7 +4,6 @@ base:
     - developer
     - packages      # assumes we have https://github.com/saltstack-formulas/packages-formula
     - docker        # assumes we have https://github.com/saltstack-formulas/docker-formula
-    - minion
 
   'master.jasonernst.com':
     - master
