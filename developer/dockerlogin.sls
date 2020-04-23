@@ -15,6 +15,7 @@ docker-apt-packages-uninstall:
 docker-pip-packages:
   pip.installed:
       - name: docker
+      - reload_modules: True
 
 docker-compose-pip-packages:
   pip.installed:
