@@ -9,11 +9,6 @@ fileserver-reactor:
     - name: /srv/reactor/update_fileserver.sls
     - source: salt://master/reactor/update_fileserver.sls
 
-# hook the reactor up
-reactor:
-  - 'salt/fileserver/gitfs/update':
-    - /srv/reactor/update_fileserver.sls
-
 salt-master-service:
   service:
     - name: salt-master
