@@ -1,20 +1,8 @@
 frontend:
   docker_network.present:
-    - name: frontend
-    - containers:
-      - www.jasonernst.com
-      - dev.jasonernst.com
-      - www.p2ptrader.io
-      - dev.p2ptrader.io
 
 backend:
   docker_network.present:
-    - name: backend
-    - containers:
-      - www.jasonernst.com
-      - dev.jasonernst.com
-      - www.p2ptrader.io
-      - dev.p2ptrader.io
 
 # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html
 git-www-jasonernst-com:
