@@ -31,6 +31,7 @@ developer_packages:
       - arp-scan                # for ip <-> mac map search
       - nmap                    # determine open ports
       - net-tools               # ifconfig
+      - traceroute              # traceroute
       - nbtscan                 # netbios scanner
       - speedtest-cli           # bandwidth debugging
 
