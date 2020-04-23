@@ -8,6 +8,7 @@ fileserver-reactor:
   file.managed:
     - name: /srv/reactor/update_fileserver.sls
     - source: salt://master/reactor/update_fileserver.sls
+    - makedirs: True
 
 salt-master-service:
   service:
