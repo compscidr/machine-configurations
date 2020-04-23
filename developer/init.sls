@@ -11,6 +11,7 @@ jason:
       - sudo
       - video
       - docker
+    - shell: /usr/bin/fish
 
 developer_packages:
   pkgrepo.managed:
