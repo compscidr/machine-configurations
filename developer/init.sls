@@ -23,6 +23,7 @@ developer_packages:
       - curl
       - wget
       - ssh
+      - tmux
       - openjdk-11-jdk          # java sdk
       - build-essential         # g++, c++, etc.
       - atom                    # ide
