@@ -16,7 +16,6 @@ python_buildpackages:
       - libbz2-dev
       - python-pip
       - python3-pip
-      - pipenv
 
 # todo make a list of python versions and install all of them alongside the
 # main system version
