@@ -1,11 +1,11 @@
 
 docker-network-frontend:
   frontend:
-    docker_network.present
+    - docker_network.present
 
 docker-network-backend:
   backend:
-    docker_network.present
+    - docker_network.present
 
 # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html
 git-www-jasonernst-com:
