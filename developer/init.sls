@@ -34,6 +34,7 @@ developer_packages:
       - traceroute              # traceroute
       - nbtscan                 # netbios scanner
       - speedtest-cli           # bandwidth debugging
+      - sshuttle                # forward ssh through tunnel
 
 include:
   - .nano
