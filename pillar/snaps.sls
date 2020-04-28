@@ -6,3 +6,4 @@ packages:
       - pycharm-professional
       - android-studio
       - spotify
+      - kubectl
