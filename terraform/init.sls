@@ -4,4 +4,3 @@ terraform_binary:
     - source_hash: sha256=602d2529aafdaa0f605c06adb7c72cfb585d8aa19b3f4d8d189b42589e27bf11
     - name: /usr/bin/terraform
     - enforce_toplevel: False
-    - mode: 755
