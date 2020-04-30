@@ -10,4 +10,5 @@ terraform_copy:
     - source: /tmp/terraform/terraform
     - name: /usr/bin/terraform
     - mode: 755
-    - require: terraform_download
+    - require:
+      - archive: /tmp/terraform
