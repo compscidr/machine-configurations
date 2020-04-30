@@ -17,6 +17,7 @@ base:
   'jason-ubuntu-desktop':
     - ipfs
     - hosts
+    - terraform
 
   'jason-asus-ubuntu':
     - ipfs
