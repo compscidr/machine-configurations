@@ -35,6 +35,7 @@ developer_packages:
       - nbtscan                 # netbios scanner
       - speedtest-cli           # bandwidth debugging
       - sshuttle                # forward ssh through tunnel
+      - sqlite3
 
 include:
   - .nano
