@@ -1,0 +1,3 @@
+conky-all:
+  pkg:
+    - installed

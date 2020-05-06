@@ -18,6 +18,7 @@ base:
     - ipfs
     - hosts
     - terraform
+    - conky
 
   'jason-asus-ubuntu':
     - ipfs
