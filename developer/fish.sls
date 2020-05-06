@@ -11,7 +11,7 @@ fish-packages:
 
 oh-my-fish:
   cmd.run:
-    - name: "curl -L https://get.oh-my.fish | tac | tac | fish -y"
+    - name: "curl -L https://get.oh-my.fish | fish"
     - runas: jason
     - unless: "fish -c 'omf list'"
 
