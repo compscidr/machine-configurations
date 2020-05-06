@@ -4,8 +4,8 @@ conky-all:
 
 /home/jason/:
   file.managed:
-    source: salt://conky/conky.desktop
-    destination: /home/jason/.config/autostart/conky.desktop
+    - source: salt://conky/conky.desktop
+    - destination: /home/jason/.config/autostart/conky.desktop
 
 conky-archive:
   archive.extracted:
