@@ -27,6 +27,7 @@ developer_packages:
       - tmux
       - openjdk-11-jdk          # java sdk
       - build-essential         # g++, c++, etc.
+      - autoconf
       - atom                    # ide
       - arp-scan                # for ip <-> mac map search
       - nmap                    # determine open ports
