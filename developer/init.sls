@@ -30,8 +30,9 @@ developer_packages:
       - autoconf
       - atom                    # ide
       - arp-scan                # for ip <-> mac map search
-      - nmap                    # determine open ports
+      - iftop                   # network top
       - net-tools               # ifconfig
+      - nmap                    # determine open ports
       - traceroute              # traceroute
       - nbtscan                 # netbios scanner
       - speedtest-cli           # bandwidth debugging
