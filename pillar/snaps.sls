@@ -7,3 +7,4 @@ packages:
       - android-studio
       - spotify
       - kubectl
+      - chromium
