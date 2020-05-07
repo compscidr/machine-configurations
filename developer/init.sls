@@ -30,6 +30,7 @@ developer_packages:
       - autoconf
       - atom                    # ide
       - arp-scan                # for ip <-> mac map search
+      - dnsutils                # dig
       - iftop                   # network top
       - net-tools               # ifconfig
       - nmap                    # determine open ports
@@ -37,6 +38,7 @@ developer_packages:
       - nbtscan                 # netbios scanner
       - speedtest-cli           # bandwidth debugging
       - sshuttle                # forward ssh through tunnel
+      - whois                   # whois
       - sqlite3
 
 include:
