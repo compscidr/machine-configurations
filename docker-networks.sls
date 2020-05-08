@@ -1,8 +1,10 @@
-frontend:
-   - docker_network.present
+frontend-network:
+  frontend:
+    - docker_network.present
+backend-network:
+  backend:
+     - docker_network.present
 
-backend:
-   - docker_network.present
-
-stats:
-  - docker_network.present
+stats-network:
+  stats:
+    - docker_network.present
