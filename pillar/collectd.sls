@@ -1,5 +1,5 @@
 collectd:
-  Hostname: {{ grains['host'] }}
+  Hostname: {{ grains['nodename'] }}
   plugins:
     default: [cpu, entropy, load, memory, swap, users]
     write_graphite:
