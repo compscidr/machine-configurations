@@ -9,3 +9,4 @@ base:
   '*':
     - docker-login
     - go
+    - collectd
