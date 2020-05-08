@@ -131,3 +131,8 @@ docker-containers:
         - "-p 11625:11625"
         - "-e VIRTUAL_PORT=8000,11626,11625"
         - "--rm"
+    grafana:
+      # note its possible to run plugins: https://grafana.com/docs/grafana/latest/installation/docker/
+      image: grafana/grafana:6.7.3
+      runoptions:
+        - "-p 3000:3000"
