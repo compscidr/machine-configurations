@@ -14,3 +14,5 @@ collectd:
       separateinstances: true
       storerates: true
       alwaysappendds: false
+    interface:
+      interfaces: ['/^enp.*/']
