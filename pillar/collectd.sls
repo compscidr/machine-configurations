@@ -1,5 +1,5 @@
 collectd:
-  hostname: {{ grains.host }}
+  Hostname: {{ grains.host }}
   plugins:
     default: [cpu, entropy, load, memory, swap, users]
     write_graphite:
