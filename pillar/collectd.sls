@@ -1,5 +1,5 @@
 collectd:
-  Hostname: salt['grains.get']('host')
+  Hostname: {{ pillar['host'] }}
   plugins:
     default: [cpu, entropy, load, memory, swap, users]
     write_graphite:
