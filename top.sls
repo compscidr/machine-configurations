@@ -1,13 +1,10 @@
 base:
 
-  '*':
-    - developer
-    - packages      # assumes we have https://github.com/saltstack-formulas/packages-formula
-    - docker        # assumes we have https://github.com/saltstack-formulas/docker-formula
-
   'master.jasonernst.com':
     - master
     - amdgpu
+    - docker        # assumes we have https://github.com/saltstack-formulas/docker-formula
+    - docker-networks
     - docker.containers
     - developer
     - website
@@ -23,3 +20,8 @@ base:
   'jason-asus-ubuntu':
     - ipfs
     - hosts
+
+  '*':
+    - developer
+    - packages      # assumes we have https://github.com/saltstack-formulas/packages-formula
+    - docker        # assumes we have https://github.com/saltstack-formulas/docker-formula
