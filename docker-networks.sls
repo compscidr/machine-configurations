@@ -1,10 +1,11 @@
-frontend-network:
-  frontend:
-    - docker_network.present
-backend-network:
-  backend:
-     - docker_network.present
+frontend:
+  docker_network.present:
+    - driver: bridge
 
-stats-network:
-  stats:
-    - docker_network.present
+backend:
+  docker_network.present:
+    - driver: bridge
+
+stats:
+  docker_network.present:
+    - driver: bridge
