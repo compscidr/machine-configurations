@@ -136,6 +136,8 @@ docker-containers:
       image: grafana/grafana:6.7.3
       runoptions:
         - "-p 3000:3000"
+        - "--network=bridge"
+        - "--rm"
     graphite:
       image: graphiteapp/graphite-statsd:1.1.7-2
       runoptions:
@@ -144,3 +146,5 @@ docker-containers:
         - "-p 2023-2024:2023-2024"
         - "-p 8125:8125/udp"
         - "-p 8126:8126"
+        - "--network=bridge"
+        - "--rm"
