@@ -136,3 +136,11 @@ docker-containers:
       image: grafana/grafana:6.7.3
       runoptions:
         - "-p 3000:3000"
+    graphite:
+      image: graphiteapp/graphite-statsd:1.1.7-2
+      runoptions:
+        - "-p 8080:80"
+        - "-p 2003-2004:2003-2004"
+        - "-p 2023-2024:2023-2024"
+        - "-p 8125:8125/udp"
+        - "-p 8126:8126"
