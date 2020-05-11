@@ -9,7 +9,7 @@ base:
     - developer
     - website
     - minecraft
-    - eth-miner
+#    - eth-miner    # disable for now due to high gpu usage
 #    - plex         # disable for now because its not working
 
   'jason-ubuntu-desktop':
