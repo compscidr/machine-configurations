@@ -18,5 +18,6 @@ docker-containers:
         - "-v /opt/statsd/config:/opt/statsd/config"
         - "-v /opt/graphite/conf:/opt/graphite/conf"
         - "-v /opt/graphite/storage:/opt/graphite/storage"
+        - "-e RELAY=1"
         - "--network=stats"
         - "--rm"
