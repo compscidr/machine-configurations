@@ -10,7 +10,7 @@ base:
     - website
     - minecraft
     - eth-miner
-    - plex
+#    - plex         # disable for now because its not working
 
   'jason-ubuntu-desktop':
     - ipfs
