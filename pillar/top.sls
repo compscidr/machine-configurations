@@ -7,6 +7,7 @@ base:
   'jason-asus-ubuntu':
     - snaps
   '*':
+    - docker
     - docker-login
     - go
     - stats-containers
