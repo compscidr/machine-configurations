@@ -1,26 +1,26 @@
-#docker-apt-packages-install:
+# docker-apt-packages-install:
 #  pkg.installed:
 #    - pkgs:
 #      - gnupg2                  # required for docker login to work
 #      - python-pip
 #      - python3-pip
-
-#docker-apt-packages-uninstall:
+#
+# docker-apt-packages-uninstall:
 #  pkg.removed:
 #    - pkgs:
 #      - docker.io
-
-# note pip docker package seems to have superseeded docker-py. DO NOT install
-# docker-py or it will break docker-compose.
-#docker-pip-packages:
+#
+# # note pip docker package seems to have superseeded docker-py. DO NOT install
+# # docker-py or it will break docker-compose.
+# docker-pip-packages:
 #  pip.installed:
 #      - name: docker
 #      - reload_modules: True
-
-#docker-compose-pip-packages:
+#
+# docker-compose-pip-packages:
 #  pip.installed:
 #      - name: docker-compose
-
+#
 docker.login:
   module.run:
     - registries:
