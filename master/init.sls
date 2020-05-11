@@ -16,3 +16,17 @@ salt-master-service:
     - running
     - require:
       - file: master-config
+
+frontend:
+  docker_network.present:
+     - driver: bridge
+     - requires:
+       - docker
+       - docker.install
+
+backend:
+   docker_network.present:
+     - driver: bridge
+     - requires:
+       - docker
+       - docker.install

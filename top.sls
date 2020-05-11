@@ -6,7 +6,6 @@ base:
     - developer
     - website
     - minecraft
-    - docker-networks
 #    - eth-miner    # disable for now due to high gpu usage
 #    - plex         # disable for now because its not working
 
@@ -24,6 +23,7 @@ base:
     - developer
     - packages          # assumes we have https://github.com/saltstack-formulas/packages-formula
     - docker            # assumes we have https://github.com/saltstack-formulas/docker-formula
+    - docker-networks   # must be before docker.containers but after docker
     - docker.containers
     - collectd          # assumes we have https://github.com/compscidr/collectd-formula
     - collectd.syslog
