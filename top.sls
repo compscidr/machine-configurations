@@ -10,6 +10,7 @@ base:
     - website
     - minecraft
     - eth-miner
+    - plex
 
   'jason-ubuntu-desktop':
     - ipfs
