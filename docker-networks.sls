@@ -1,7 +1,5 @@
 stats:
-  docker_network:
-    present:
-      - driver: bridge
-    requires:
+  docker_network.present:
+    - driver: bridge
+    - require:
       - docker
-      - docker.install
