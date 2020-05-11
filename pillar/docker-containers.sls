@@ -146,6 +146,8 @@ docker-containers:
         - "-p 2023-2024:2023-2024"
         - "-p 8125:8125/udp"
         - "-p 8126:8126"
+        - "-v /opt/statsd/config:/opt/statsd/config"
+        - "-v /opt/graphite/conf:/opt/graphite/conf"
         - "-v /opt/graphite/storage:/opt/graphite/storage"
         - "--network=stats"
         - "--rm"
