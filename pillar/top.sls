@@ -9,4 +9,5 @@ base:
   '*':
     - docker-login
     - go
+    - stats-containers
     - collectd
