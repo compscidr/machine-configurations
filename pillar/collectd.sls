@@ -16,3 +16,15 @@ collectd:
       alwaysappendds: false
     interface:
       interfaces: ['/^enp.*/']
+    df:
+      MountPoints:
+        - "/"
+        - "/home"
+        - "/var/log"
+        - "/var/lib"
+        - "/opt"
+      IgnoreSelected: false
+      ReportByDevice: false
+      ReportInodes: true
+      ValuesPercentage: false
+      ValuesAbsolute: true
