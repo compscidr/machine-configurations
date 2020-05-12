@@ -40,6 +40,7 @@ developer_packages:
       - sshuttle                # forward ssh through tunnel
       - whois                   # whois
       - sqlite3
+      - socat                   # sort of like nc but doesn't hang
 
 include:
   - .nano
