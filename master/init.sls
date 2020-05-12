@@ -20,13 +20,7 @@ salt-master-service:
 frontend:
   docker_network.present:
      - driver: bridge
-     - requires:
-       - docker
-       - docker.install
 
 backend:
-   docker_network.present:
+  docker_network.present:
      - driver: bridge
-     - requires:
-       - docker
-       - docker.install
