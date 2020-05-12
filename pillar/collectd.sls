@@ -5,7 +5,7 @@ collectd:
     write_graphite:
       name: graphite
       host: localhost
-      port: "2003"
+      port: "2013"
       protocol: "tcp"
       prefix: "collectd."
       postfix: ""
