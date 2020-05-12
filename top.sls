@@ -34,3 +34,4 @@ base:
     - collectd.processes
     - collectd.uptime
     - collectd.cpu
+    - collectd.swap
