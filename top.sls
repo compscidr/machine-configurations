@@ -31,6 +31,7 @@ base:
     - collectd.interface
     - collectd.write_graphite
     - collectd.df
+    - collectd.disk
     - collectd.processes
     - collectd.uptime
     - collectd.cpu
