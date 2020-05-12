@@ -32,3 +32,4 @@ base:
     - collectd.write_graphite
     - collectd.df
     - collectd.processes
+    - collectd.uptime
