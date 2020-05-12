@@ -33,3 +33,4 @@ base:
     - collectd.df
     - collectd.processes
     - collectd.uptime
+    - collectd.cpu
