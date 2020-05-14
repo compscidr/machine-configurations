@@ -32,6 +32,7 @@ developer_packages:
       - arp-scan                # for ip <-> mac map search
       - dnsutils                # dig
       - iftop                   # network top
+      - iotop                   # disk top
       - net-tools               # ifconfig, netstat, arp
       - nmap                    # determine open ports
       - traceroute              # traceroute
