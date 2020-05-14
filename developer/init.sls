@@ -14,11 +14,6 @@ jason:
     - shell: /usr/bin/fish
 
 developer_packages:
-  pkgrepo.managed:
-    - name: deb https://packagecloud.io/AtomEditor/atom/any/ any main
-    - file: /etc/apt/sources.list.d/atom.list
-    - key_url: https://packagecloud.io/AtomEditor/atom/gpgkey
-
   pkg.installed:
     - pkgs:
       - curl
@@ -28,7 +23,6 @@ developer_packages:
       - openjdk-11-jdk          # java sdk
       - build-essential         # g++, c++, etc.
       - autoconf
-      - atom                    # ide
       - arp-scan                # for ip <-> mac map search
       - dnsutils                # dig
       - iftop                   # network top
@@ -44,6 +38,7 @@ developer_packages:
       - socat                   # sort of like nc but doesn't hang
 
 include:
+  - .atom
   - .nano
   - .templates
   - .go
@@ -51,3 +46,4 @@ include:
   - .dockerlogin
   - .keybase
   - .fish
+  - .virtualbox
