@@ -23,9 +23,9 @@ base:
     - developer
     - packages          # assumes we have https://github.com/saltstack-formulas/packages-formula
     - docker            # assumes we have https://github.com/saltstack-formulas/docker-formula
+    - docker.compose    # assumes we have https://github.com/saltstack-formulas/docker-formula
     - docker-networks   # must be before docker.containers but after docker
     - docker.containers
-    - docker.compose
     - collectd          # assumes we have https://github.com/compscidr/collectd-formula
     - collectd.syslog
     - collectd.interface
