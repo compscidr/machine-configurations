@@ -5,7 +5,7 @@ with as little work as possible.
 
 ## What works:
 - [x] simple initial deployment - ideally with a script after a barebones OS has
-been installed. 
+been installed.
 - [x] segregated secrets from infrastructure scripts so they aren't committed to
 repositories.
 - [x] ability to move hosted sites around to other machines
@@ -24,12 +24,12 @@ similar configurations for common tools
 The salt master is on [master.jasonernst.com](master.jasonernst.com). The salt
 master should also be configured to be a salt minion so that it can set itself
 up. A variety of websites are hosted on the same server to save money from
-getting aws instances. Since the server isn't the most reliable it is super 
+getting aws instances. Since the server isn't the most reliable it is super
 important that code is stored on github and the content is regularly backed up
 somewhere else.
 
 Everything is run in docker containers with the philosophy of a single process
-per container. In order to serve the multiple servers from the same machine, I 
+per container. In order to serve the multiple servers from the same machine, I
 use an nginx reverse proxy. There is a www and dev apache server for each
 website. There is also a www and dev php server for each. The reason for this
 is so the mapping from the master and dev branch points to different web root
@@ -49,7 +49,7 @@ or terraform, but I need to figure those tools out first.
 
 ## Master Setup
 Run the `bootstrap-env.sh` script on `master.jasonernst.com` if setting
-it up for the first time. 
+it up for the first time.
 
 To setup the docker minions, run `bootstrap-docker.sh`.
 
@@ -61,6 +61,10 @@ is correct, accept it.
 `sudo salt-key -a <key-glob>`
 
 ## Minion Setup
+An easy way to get going is to follow the instructions on adding the salt repo
+here: https://repo.saltstack.com/ and then apt-get installing the minion. Once
+the minion is installed and has had it's key accepted by the master, the states
+will take care of keeping the version of the minion up to date.
 
 Minions can be standalone machines or docker minions. In the case of standalone
 machine (does not work on ubuntu 19.10):
