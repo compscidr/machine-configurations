@@ -8,3 +8,4 @@ virtualbox_package:
   pkg.installed:
     - pkgs:
       - virtualbox
+      - virtualbox-dkms
