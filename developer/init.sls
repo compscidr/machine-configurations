@@ -16,13 +16,13 @@ jason:
 developer_packages:
   pkg.installed:
     - pkgs:
-      - curl
-      - wget
-      - ssh
-      - tmux
+      - curl                    # command line http tool
+      - wget                    # command line http tool
+      - ssh                     # ssh server
+      - tmux                    # multi-pane terminal
       - openjdk-11-jdk          # java sdk
       - build-essential         # g++, c++, etc.
-      - autoconf
+      - autoconf                # auto build tools
       - arp-scan                # for ip <-> mac map search
       - dnsutils                # dig
       - iftop                   # network top
@@ -34,7 +34,7 @@ developer_packages:
       - speedtest-cli           # bandwidth debugging
       - sshuttle                # forward ssh through tunnel
       - whois                   # whois
-      - sqlite3
+      - sqlite3                 # good db for integration tests
       - socat                   # sort of like nc but doesn't hang
 
 include:
