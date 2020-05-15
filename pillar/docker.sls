@@ -1,5 +1,6 @@
 docker:
   install_docker_py: true
-  pip_version: ==1.10.0
+  install_pypi_pip: true
+  compose_version: 1.9.0
   python_package: false
   reload_modules: true
