@@ -36,6 +36,7 @@ developer_packages:
       - whois                   # whois
       - sqlite3                 # good db for integration tests
       - socat                   # sort of like nc but doesn't hang
+      - linux-headers-generic
 
 include:
   - .atom
