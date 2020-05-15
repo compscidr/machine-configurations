@@ -47,3 +47,4 @@ include:
   - .keybase
   - .fish
   - .virtualbox
+  - .minikube
