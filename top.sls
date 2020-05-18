@@ -24,6 +24,7 @@ base:
   '*':
     - developer
     - packages          # assumes we have https://github.com/saltstack-formulas/packages-formula
+    - docker-fix
     - docker            # assumes we have https://github.com/saltstack-formulas/docker-formula
     - docker.compose    # assumes we have https://github.com/saltstack-formulas/docker-formula
     - docker-networks   # must be before docker.containers but after docker
