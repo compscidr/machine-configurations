@@ -1,15 +1,16 @@
 # https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html
-git-www-jasonernst-com:
-  git.latest:
-    - name: git@github.com:compscidr/www.jasonernst.com.git
-    - branch: master
-    - rev: master
-    - target: /var/www/www.jasonernst.com/
-    - force_reset: True
+www-jasonernst-com:
+  file.touch:
+    - name: /opt/goblog/prod/test.db
+    - makedirs: True
+
+git-www-jasonernst.com:
+  file.absent:
+    - name: /var/www/www.jasonernst.com
 
 dev-jasonernst-com:
   file.touch:
-    - name: /opt/goblog/test.db
+    - name: /opt/goblog/dev/test.db
     - makedirs: True
 
 git-dev-jasonernst.com:
