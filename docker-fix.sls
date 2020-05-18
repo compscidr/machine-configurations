@@ -1,7 +1,7 @@
 remove-docker-py:
   pip.removed:
     - name: docker-py
-    - unless: docker-compose --version | grep 1.25.0
+    - unless: !(docker-compose --version | grep 1.25.0)
 
 remove-docker-compose:
   pip.removed:
