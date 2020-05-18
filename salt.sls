@@ -1,7 +1,8 @@
 old-salt-repo:
   file.absent:
     - name: /etc/apt/sources.list.d/saltstack.list
-    - unless: !(cat /etc/apt/sources.list.d/saltstack.list | grep 3000)
+    - onlyif: cat /etc/apt/sources.list.d/saltstack.list | grep 3000
+    # note: grep will return non-zero if string not found, otherwise zero
 
 # todo make this use grains in case different os's
 salt-repo:
