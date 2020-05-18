@@ -1,6 +1,6 @@
 base:
   'master.jasonernst.com':
-    - docker-containers
+    - website-containers
     - nvidia
   'jason-ubuntu-desktop':
     - snaps

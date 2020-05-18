@@ -37,16 +37,15 @@ docker-containers:
         - "--network=bridge"
         - "--rm"
     dev.jasonernst.com:
-      image: "compscidr/apache:0.5.0"
+      image: "compscidr/goblog:latest"
       cmd:
       runoptions:
-        - "-p 8080"
+        - "-p 7000"
         - "-e VIRTUAL_HOST=dev.jasonernst.com"
-        - "-e VIRTUAL_PORT=8080"
+        - "-e VIRTUAL_PORT=7000"
         - "-e LETSENCRYPT_HOST=dev.jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
-        - "-e PHP_HOST=dev-php"
-        - "-v /var/www/dev.jasonernst.com/:/var/www/html/"
+        - "-v /opt/goblog/test.db:/go/src/github.com/compscidr/goblog/test.db"
         - "--network=bridge"
         - "--rm"
     www-php:
