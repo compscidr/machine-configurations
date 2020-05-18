@@ -10,12 +10,14 @@ base:
 #    - plex         # disable for now because its not working
 
   'jason-ubuntu-desktop':
+    - salt
     - ipfs
     - hosts
     - terraform
     - conky
 
   'jason-asus-ubuntu':
+    - salt
     - ipfs
     - hosts
 

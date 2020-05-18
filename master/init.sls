@@ -41,7 +41,9 @@ salt-repo:
       - old-salt-repo
 
 salt-master:
-  pkg.installed
+  pkg.installed:
+    - allow_updates: True
 
 salt-minion:
-  pkg.installed
+  pkg.installed:
+    - allow_updates: True
