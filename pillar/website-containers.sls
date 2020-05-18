@@ -28,9 +28,9 @@ docker-containers:
       cmd:
       runoptions:
         - "-p 7000"
-        - "-e VIRTUAL_HOST=www.jasonernst.com"
+        - "-e VIRTUAL_HOST=www.jasonernst.com,jasonernst.com"
         - "-e VIRTUAL_PORT=7000"
-        - "-e LETSENCRYPT_HOST=www.jasonernst.com"
+        - "-e LETSENCRYPT_HOST=www.jasonernst.com,jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /opt/goblog/prod/test.db:/go/src/github.com/compscidr/goblog/test.db"
         - "--network=bridge"
