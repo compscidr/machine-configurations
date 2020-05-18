@@ -6,9 +6,11 @@ remove-docker-py:
 remove-docker-compose:
   pip.removed:
     - name: docker-compose
-    - require: remove-docker-py
+    - require:
+      - remove-docker-py
 
 remove-docker:
   pip.removed:
     - name: docker
-    - require: remove-docker-py
+    - require:
+      - remove-docker-py
