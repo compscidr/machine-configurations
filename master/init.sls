@@ -48,5 +48,14 @@ salt-minion:
   pkg.installed:
     - allow_updates: True
 
+/etc/chrony/chrony.conf:
+  file.managed:
+    - source: salt://master/chrony.conf
+
 chrony:
-  pkg.installed
+  pkg.installed: []
+  service.running:
+    - watch:
+      - file: /etc/chrony/chrony.conf
+    - require:
+      - pkg: chrony
