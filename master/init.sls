@@ -47,3 +47,6 @@ salt-master:
 salt-minion:
   pkg.installed:
     - allow_updates: True
+
+chrony:
+  pkg.installed
