@@ -1,4 +1,4 @@
 plex_package:
   pkg.installed:
     - sources:
-      - plex_server: https://downloads.plex.tv/plex-media-server-new/1.19.3.2764-ef515a800/debian/plexmediaserver_1.19.3.2764-ef515a800_amd64.deb
+      - plex_server: https://plex.tv/downloads/latest/5?channel=16&build=linux-x86_64&distro=debian&X-Plex-Token=DVJW88KyVL8T6Bzxfpab
