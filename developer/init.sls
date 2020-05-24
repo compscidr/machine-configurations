@@ -25,6 +25,7 @@ developer_packages:
       - autoconf                # auto build tools
       - arp-scan                # for ip <-> mac map search
       - dnsutils                # dig
+      - ethtool                 # gets info like link speed
       - iftop                   # network top
       - iotop                   # disk top
       - net-tools               # ifconfig, netstat, arp
