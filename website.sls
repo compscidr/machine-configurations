@@ -7,6 +7,9 @@ www-jasonernst-com:
 /opt/goblog/prod/.env:
   file.managed:
     - append_if_not_found: True
+    - contents: |
+    client_id={{ pillar['www.jasonernst.com']['client_id'] }}
+    client_secret={{pillar['www.jasonernst.com']['client_secret']}}
     - contents_pillar: www.jasonernst.com
 
 git-www-jasonernst.com:
