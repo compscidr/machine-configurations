@@ -1,6 +1,6 @@
 base:
   'master.jasonernst.com':
-#    - website-secrets
+    - website-secrets
     - website-containers
     - nvidia
   'jason-ubuntu-desktop':
