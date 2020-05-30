@@ -8,8 +8,8 @@ www-jasonernst-com:
   file.managed:
     - append_if_not_found: True
     - contents: |
-    client_id={{ pillar['www.jasonernst.com']['client_id'] }}
-    client_secret={{pillar['www.jasonernst.com']['client_secret']}}
+      client_id={{ pillar['www.jasonernst.com']['client_id'] }}
+      client_secret={{pillar['www.jasonernst.com']['client_secret']}}
 
 git-www-jasonernst.com:
   file.absent:
