@@ -9,7 +9,6 @@ www-jasonernst-com:
     - append_if_not_found: True
     - contents_pillar: website-secrets.www.jasonernst.com
 
-
 git-www-jasonernst.com:
   file.absent:
     - name: /var/www/www.jasonernst.com
