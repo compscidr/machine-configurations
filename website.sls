@@ -7,7 +7,7 @@ www-jasonernst-com:
 /opt/goblog/prod/.env:
   file.managed:
     - append_if_not_found: True
-    - contents_pillar: website-secrets.www.jasonernst.com
+    - contents_pillar: www.jasonernst.com
 
 git-www-jasonernst.com:
   file.absent:
