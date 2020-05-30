@@ -4,6 +4,12 @@ www-jasonernst-com:
     - name: /opt/goblog/prod/test.db
     - makedirs: True
 
+/opt/goblog/prod/.env:
+  file.managed:
+    - append_if_not_found: True
+    - contents_pillar: website-secrets.www.jasonernst.com
+
+
 git-www-jasonernst.com:
   file.absent:
     - name: /var/www/www.jasonernst.com
