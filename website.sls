@@ -10,7 +10,6 @@ www-jasonernst-com:
     - contents: |
     client_id={{ pillar['www.jasonernst.com']['client_id'] }}
     client_secret={{pillar['www.jasonernst.com']['client_secret']}}
-    - contents_pillar: www.jasonernst.com
 
 git-www-jasonernst.com:
   file.absent:
