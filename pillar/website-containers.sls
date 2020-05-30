@@ -33,7 +33,7 @@ docker-containers:
         - "-e LETSENCRYPT_HOST=www.jasonernst.com,jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /opt/goblog/prod/test.db:/go/src/github.com/compscidr/goblog/test.db"
-        - "-v /opt/goblog/prod/.env:/go/src/github.com/compscidr/goblog/.env
+        - "-v /opt/goblog/prod/.env:/go/src/github.com/compscidr/goblog/.env"
         - "--network=bridge"
         - "--rm"
     # www.jasonernst.com:
