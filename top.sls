@@ -11,6 +11,7 @@ base:
 
   'jason-ubuntu-desktop':
     - salt
+    - amdgpu
     - ipfs
     - hosts
     - terraform
