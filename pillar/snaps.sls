@@ -5,6 +5,7 @@ packages:
     classic:
       - slack
       - pycharm-professional
+      - clion
       - intellij-idea-community
       - android-studio
       - spotify
