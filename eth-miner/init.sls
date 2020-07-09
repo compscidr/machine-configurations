@@ -1,12 +1,12 @@
 eth-miner:
   group.present
 
-#eth-miner:
-#  user.present:
-#    - createhome: False
-#    - groups:
-#        - eth-miner
-#        - video
+eth-miner:
+  user.present:
+    - createhome: False
+    - groups:
+        - eth-miner
+        - video
 
 eth-miner-create_dir:
   file.directory:
