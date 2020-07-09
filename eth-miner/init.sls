@@ -18,16 +18,6 @@ eth-miner-create_dir:
     - group: eth-miner
     - mode: 755
 
-eth-packages:
-  pkg.installed:
-    - pkgs:
-      - libclang-common-10-dev
-      - libclc-amdgcn
-      - libclc-dev
-      - libclc-r600
-      - libllvm10
-      - mesa-opencl-icd
-
 ethereum-repo:
   pkgrepo.managed:
     - ppa: ethereum/ethereum
