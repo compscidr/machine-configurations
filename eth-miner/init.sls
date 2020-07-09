@@ -20,7 +20,7 @@ eth-miner-create_dir:
 
 eth-packages:
   pkg.installed:
-    pkgs:
+    - pkgs:
       - libclang-common-10-dev
       - libclc-amdgcn
       - libclc-dev
