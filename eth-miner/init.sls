@@ -1,9 +1,7 @@
 eth-miner:
-  group.present
-
-eth-miner:
   user.present:
     - createhome: False
+    - usergroup: True
     - groups:
         - eth-miner
         - video
