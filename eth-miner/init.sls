@@ -1,7 +1,5 @@
 eth-miner:
-  group.present:
-    - addusers:
-      - eth-miner
+  group.present
 
 #eth-miner:
 #  user.present:
