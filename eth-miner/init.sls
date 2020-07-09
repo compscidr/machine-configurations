@@ -1,9 +1,14 @@
 eth-miner:
-  user.present:
-    - createhome: False
-    - groups:
-        - eth-miner
-        - video
+  group.present:
+    - addusers:
+      - eth-miner
+
+#eth-miner:
+#  user.present:
+#    - createhome: False
+#    - groups:
+#        - eth-miner
+#        - video
 
 eth-miner-create_dir:
   file.directory:

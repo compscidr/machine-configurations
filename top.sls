@@ -16,6 +16,7 @@ base:
     - hosts
     - terraform
     - conky
+    - eth-miner
 
   'jason-asus-ubuntu':
     - salt
