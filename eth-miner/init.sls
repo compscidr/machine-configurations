@@ -1,7 +1,11 @@
-eth-miner:
+eth-miner-group:
+  group.present:
+    - name: eth-miner
+
+eth-miner-user:
   user.present:
+    - name: eth-miner
     - createhome: False
-    - usergroup: True
     - groups:
         - eth-miner
         - video
