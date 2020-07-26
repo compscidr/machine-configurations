@@ -134,12 +134,12 @@ docker-containers:
         - "-e MYSQL_ROOT_PASSWORD=rootpassword"
         - "--network=backend"
         - "--rm"
-    stellar-core:
-      image: stellar/quickstart
-      cmd:
-      runoptions:
-        - "-p 8000:8000"
-        - "-p 11626:11626"
-        - "-p 11625:11625"
-        - "-e VIRTUAL_PORT=8000,11626,11625"
-        - "--rm"
+#    stellar-core:
+#      image: stellar/quickstart
+#      cmd:
+#      runoptions:
+#        - "-p 8000:8000"
+#        - "-p 11626:11626"
+#        - "-p 11625:11625"
+#        - "-e VIRTUAL_PORT=8000,11626,11625"
+#        - "--rm"
