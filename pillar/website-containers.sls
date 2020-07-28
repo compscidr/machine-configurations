@@ -24,7 +24,7 @@ docker-containers:
         - "--network=bridge"
         - "--rm"
     www.jasonernst.com:
-      image: "compscidr/goblog:latest"
+      image: "compscidr/goblog:v0.1.2"
       cmd:
       runoptions:
         - "-p 7000"
