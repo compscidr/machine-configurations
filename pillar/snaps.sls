@@ -4,7 +4,7 @@ packages:
   snaps:
     classic:
       - slack
-      - pycharm-professional
+      - pycharm-community
       - clion
       - intellij-idea-community
       - android-studio

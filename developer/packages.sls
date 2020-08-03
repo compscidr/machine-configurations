@@ -1,0 +1,25 @@
+developer_packages:
+  pkg.installed:
+    - pkgs:
+      - curl                    # command line http tool
+      - wget                    # command line http tool
+      - ssh                     # ssh server
+      - tmux                    # multi-pane terminal
+      - openjdk-11-jdk          # java sdk
+      - build-essential         # g++, c++, etc.
+      - autoconf                # auto build tools
+      - arp-scan                # for ip <-> mac map search
+      - dnsutils                # dig
+      - ethtool                 # gets info like link speed
+      - iftop                   # network top
+      - iotop                   # disk top
+      - net-tools               # ifconfig, netstat, arp
+      - nmap                    # determine open ports
+      - traceroute              # traceroute
+      - nbtscan                 # netbios scanner
+      - speedtest-cli           # bandwidth debugging
+      - sshuttle                # forward ssh through tunnel
+      - whois                   # whois
+      - sqlite3                 # good db for integration tests
+      - socat                   # sort of like nc but doesn't hang
+      - linux-headers-generic
