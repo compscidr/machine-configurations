@@ -24,7 +24,7 @@ docker-containers:
         - "--network=bridge"
         - "--rm"
     www.jasonernst.com:
-      image: "compscidr/goblog:latest"
+      image: "compscidr/goblog:v0.1.2"
       cmd:
       runoptions:
         - "-p 7000"
@@ -33,6 +33,7 @@ docker-containers:
         - "-e LETSENCRYPT_HOST=www.jasonernst.com,jasonernst.com"
         - "-e LETSENCRYPT_EMAIL=ernstjason1@gmail.com"
         - "-v /opt/goblog/prod/test.db:/go/src/github.com/compscidr/goblog/test.db"
+        - "-v /opt/goblog/prod/uploads:/go/src/github.com/compscidr/goblog/uploads"
         - "-v /opt/goblog/prod/.env:/go/src/github.com/compscidr/goblog/.env"
         - "--network=bridge"
         - "--rm"
@@ -134,12 +135,12 @@ docker-containers:
         - "-e MYSQL_ROOT_PASSWORD=rootpassword"
         - "--network=backend"
         - "--rm"
-    stellar-core:
-      image: stellar/quickstart
-      cmd:
-      runoptions:
-        - "-p 8000:8000"
-        - "-p 11626:11626"
-        - "-p 11625:11625"
-        - "-e VIRTUAL_PORT=8000,11626,11625"
-        - "--rm"
+#    stellar-core:
+#      image: stellar/quickstart
+#      cmd:
+#      runoptions:
+#        - "-p 8000:8000"
+#        - "-p 11626:11626"
+#        - "-p 11625:11625"
+#        - "-e VIRTUAL_PORT=8000,11626,11625"
+#        - "--rm"

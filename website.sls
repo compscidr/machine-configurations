@@ -4,6 +4,10 @@ www-jasonernst-com:
     - name: /opt/goblog/prod/test.db
     - makedirs: True
 
+/opt/goblog/prod/uploads:
+  file.directory:
+    - makedirs: True
+
 /opt/goblog/prod/.env:
   file.managed:
     - contents: |
