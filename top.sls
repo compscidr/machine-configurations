@@ -26,6 +26,9 @@ base:
   'jason-ThinkPad-P53s':
     - developer.packages
 
+  '*':
+    - cleanup
+
   # '*':
   #   - developer
   #   - packages          # assumes we have https://github.com/saltstack-formulas/packages-formula
