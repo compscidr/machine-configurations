@@ -11,7 +11,7 @@ jason:
       - sudo
       - video
       - docker
-    - shell: /usr/bin/bash
+    - shell: /bin/bash
 
 include:
   - .packages
