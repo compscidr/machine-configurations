@@ -11,7 +11,7 @@ jason:
       - sudo
       - video
       - docker
-    - shell: /usr/bin/fish
+    - shell: /usr/bin/bash
 
 include:
   - .packages
@@ -25,3 +25,4 @@ include:
   - .fish
   - .virtualbox
   - .minikube
+  - .tmux

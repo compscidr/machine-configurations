@@ -7,6 +7,7 @@ fish-packages:
     - pkgs:
       - fish
       - curl
+      - powerline
       - fonts-powerline   # fonts for the statusbar
 
 oh-my-fish:
