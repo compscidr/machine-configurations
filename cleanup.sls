@@ -4,3 +4,4 @@ cleanup-containers:
       - stellar-core
       - grafana
       - graphite
+    - force: True
