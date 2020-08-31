@@ -10,6 +10,6 @@ base:
   '*':
     - docker
     - docker-login
-    - go
-    - stats-containers
-    - collectd
+  #  - go
+  #  - stats-containers
+  #  - collectd
